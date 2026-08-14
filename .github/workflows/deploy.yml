@@ -1,13 +1,18 @@
-name: Build and deploy
+name: Quality check
+
+# Cloudflare handles the actual deploying, watching this repo directly.
+# This workflow is the guard rail: it builds the site and fails loudly if
+# anything regresses, so you find out before readers do.
+
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  check:
     runs-on: ubuntu-latest
-    permissions: { contents: read, deployments: write }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,24 +22,24 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      # Fails the build if any page grows past budget. This is the guard that
-      # stops the old copy-paste problem from creeping back in.
-      - name: Check page weight budget
+      - name: Page weight budget
         run: |
           FAIL=0
-          # Only the migrated editions are budgeted. The 26 not-yet-migrated
-          # pages are carried over as-is and are exempt until their turn comes.
           for f in $(find dist -name 'edition-*.html'); do
             KB=$(( $(stat -c%s "$f") / 1024 ))
-            if [ "$KB" -gt 120 ]; then echo "TOO BIG: $f = ${KB} KB (budget 120 KB)"; FAIL=1; fi
+            if [ "$KB" -gt 120 ]; then echo "TOO BIG: $f = ${KB} KB (budget 120)"; FAIL=1; fi
           done
           CSS=$(find dist/_astro -name '*.css' -exec stat -c%s {} + | awk '{s+=$1} END {print int(s/1024)}')
-          echo "Total CSS: ${CSS} KB"
+          echo "Shared CSS: ${CSS} KB (budget 120)"
           if [ "$CSS" -gt 120 ]; then echo "CSS budget exceeded"; FAIL=1; fi
           exit $FAIL
 
-      - uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=healthcare-pulse
+      - name: No template leaks or broken pages
+        run: |
+          FAIL=0
+          LEAK=$(grep -rlE '\{\{ *(site|page|post)\.|\{% *(for|if|assign)' dist --include='*.html' || true)
+          if [ -n "$LEAK" ]; then echo "Jekyll template code leaked into: $LEAK"; FAIL=1; fi
+          for f in $(find dist -name '*.html'); do
+            if ! head -c 400 "$f" | grep -qi '<!DOCTYPE'; then echo "Not a full page: $f"; FAIL=1; fi
+          done
+          exit $FAIL
