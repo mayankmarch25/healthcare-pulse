@@ -1,0 +1,73 @@
+.gap-card {
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin: 14px 0;
+  border-left: 5px solid;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.gap-card .g-tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.gap-card h3 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 4px 0 8px;
+}
+.gap-card p {
+  font-size: 14.5px;
+  color: var(--body-c);
+  line-height: 1.55;
+  margin: 0;
+}
+.g-crit {
+  border-left-color: #C0392B;
+}
+.g-crit .g-tag {
+  color: #C0392B;
+}
+.g-high {
+  border-left-color: var(--amber);
+}
+.g-high .g-tag {
+  color: var(--amberdk);
+}
+.g-emrg {
+  border-left-color: var(--blue);
+}
+.g-emrg .g-tag {
+  color: var(--blue);
+}
+.move-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: start;
+  margin: 12px 0;
+  padding: 16px 18px;
+  background: var(--tintT);
+  border-radius: 12px;
+}
+.move-row .mr-num {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--teal);
+}
+.move-row h4 {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+.move-row p {
+  font-size: 14px;
+  color: var(--body-c);
+  margin: 0;
+  line-height: 1.5;
+}

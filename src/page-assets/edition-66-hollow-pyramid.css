@@ -1,0 +1,123 @@
+.fig-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin: 0 0 10px;
+}
+.fig-tag.bld {
+  background: rgba(224,138,60,.14);
+  color: #B06A25;
+  border: 1px solid rgba(224,138,60,.4);
+}
+.fig-tag.ppl {
+  background: rgba(15,163,163,.12);
+  color: #0B7F7F;
+  border: 1px solid rgba(15,163,163,.4);
+}
+[data-theme="dark"] .fig-tag.bld {
+  color: #F0B27E;
+}
+[data-theme="dark"] .fig-tag.ppl {
+  color: #7FD6D6;
+}
+.rhp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  margin: 22px 0 4px;
+}
+.rhp-tier {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  color: #fff;
+  font-family: var(--mono);
+  font-weight: 700;
+  letter-spacing: .03em;
+  font-size: 14px;
+  box-shadow: var(--shadow);
+}
+.rhp-chc {
+  width: 40%;
+  min-width: 120px;
+  background: linear-gradient(135deg,#C2563F,#8B2635);
+}
+.rhp-phc {
+  width: 66%;
+  background: linear-gradient(135deg,#E08A3C,#B8892B);
+}
+.rhp-sc {
+  width: 92%;
+  background: linear-gradient(135deg,#0FA3A3,#2E7CB8);
+}
+.rhp-flow {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .05em;
+  color: var(--muted);
+  text-align: center;
+  margin: 2px 0 0;
+}
+.rhp-key {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.rhp-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 13px;
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.rhp-row:last-child {
+  border-bottom: 0;
+}
+.rhp-badge {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #fff;
+  padding: 5px 9px;
+  border-radius: 6px;
+  white-space: nowrap;
+  margin-top: 1px;
+  text-align: center;
+}
+.rhp-badge.chc {
+  background: #C2563F;
+}
+.rhp-badge.phc {
+  background: #E08A3C;
+}
+.rhp-badge.sc {
+  background: #0FA3A3;
+}
+.rhp-row p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--body-c);
+}
+.rhp-row p b {
+  color: var(--navy);
+}
+.rhp-row .serves {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 4px;
+}

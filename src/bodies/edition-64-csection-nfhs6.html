@@ -1,0 +1,125 @@
+
+    <p class="lede">NFHS-6 puts India's caesarean rate at 27.2%, up from 21.5% three years ago. But the national average hides the real story: in private hospitals, more than half of all births are now surgical, against one in six in public facilities.</p>
+
+    <p>The sixth National Family Health Survey (2023-24) records a 5.7 percentage-point jump in C-sections in roughly three years. That alone puts India at nearly double the WHO's recommended population ceiling of 10 to 15%. Yet the headline number is the least interesting part. The interesting part is where the surgery happens, and who pays for it.</p>
+
+    <div class="ed-callout"><p>A birth in a private hospital is <b>more than three times as likely to end in surgery</b> as one in a public hospital. Clinical need does not vary 3x by who owns the building.</p></div>
+
+    <h2>The national picture, and the split underneath it</h2>
+    <p>The aggregate masks two different systems operating side by side. Public facilities sit at 16.9% — above the WHO band, but within sight of it. Private facilities sit at 54.1%, a number with no plausible clinical justification. The gap is the signal.</p>
+
+    <div class="ed-chart">
+      <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="C-section rates by facility type and survey round">
+        <style>
+          .axt{font:600 13px 'IBM Plex Mono',monospace;fill:#6E828C}
+          .vlab{font:700 15px 'Manrope',sans-serif;fill:#1B3A4B}
+          .blab{font:600 13px 'Manrope',sans-serif;fill:#37505B}
+          .ttl{font:700 14px 'Manrope',sans-serif;fill:#1B3A4B}
+        </style>
+        <text x="20" y="26" class="ttl">C-section rate by facility type (%)</text>
+        <!-- baseline -->
+        <line x1="180" y1="60" x2="180" y2="250" stroke="#E2EDED" stroke-width="1.5"/>
+        <!-- bars: scale 100% = 480px -->
+        <!-- Private NFHS-6 54.1 -->
+        <rect x="180" y="74" width="260" height="30" rx="5" fill="#2E7CB8"/>
+        <text x="450" y="94" class="vlab">54.1%</text>
+        <text x="20" y="94" class="blab">Private (NFHS-6)</text>
+        <!-- Private NFHS-5 47.4 -->
+        <rect x="180" y="112" width="228" height="22" rx="5" fill="#9DC3E0"/>
+        <text x="418" y="129" class="blab">47.4%</text>
+        <text x="20" y="129" class="blab">Private (NFHS-5)</text>
+        <!-- All NFHS-6 27.2 -->
+        <rect x="180" y="150" width="131" height="30" rx="5" fill="#0FA3A3"/>
+        <text x="321" y="170" class="vlab">27.2%</text>
+        <text x="20" y="170" class="blab">All India (NFHS-6)</text>
+        <!-- Public NFHS-6 16.9 -->
+        <rect x="180" y="188" width="81" height="30" rx="5" fill="#E08A3C"/>
+        <text x="271" y="208" class="vlab">16.9%</text>
+        <text x="20" y="208" class="blab">Public (NFHS-6)</text>
+        <!-- WHO ceiling marker 15% = 72px -->
+        <line x1="252" y1="64" x2="252" y2="246" stroke="#C2563F" stroke-width="2" stroke-dasharray="5 4"/>
+        <text x="256" y="240" class="axt" fill="#C2563F">WHO ceiling 15%</text>
+      </svg>
+    </div>
+
+    <p>Public-sector rates near 17% suggest the clinical baseline India actually needs is far below what the private sector delivers. The 37-point gap between the two is not medicine. It is the sum of fee-for-service incentives, convenience scheduling, and defensive practice.</p>
+
+    <h2>The state spread is extreme, and one-directional</h2>
+    <p>Sorted by total rate, the range runs from Telangana at 62.2% to Meghalaya at 6.4%. But almost every state tells the same private-versus-public story underneath. In Bihar, the overall rate is a modest 13.2% — yet private facilities run at 49.3% against just 2.7% in public. The split is structural, not regional.</p>
+
+    <div class="ed-chart">
+      <svg viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top states by C-section rate">
+        <style>
+          .sn{font:600 13px 'Manrope',sans-serif;fill:#37505B}
+          .sv{font:700 12px 'IBM Plex Mono',monospace;fill:#1B3A4B}
+          .ttl2{font:700 14px 'Manrope',sans-serif;fill:#1B3A4B}
+          .cap{font:500 11px 'IBM Plex Mono',monospace;fill:#6E828C}
+        </style>
+        <text x="20" y="24" class="ttl2">Total C-section rate — selected states (%)</text>
+        <!-- rows, scale 70% = 520px from x=150 -->
+        <!-- Telangana 62.2 -->
+        <text x="20" y="60" class="sn">Telangana</text>
+        <rect x="150" y="48" width="462" height="16" rx="4" fill="#2E7CB8"/>
+        <text x="620" y="61" class="sv">62.2</text>
+        <!-- Andhra 52.2 -->
+        <text x="20" y="88" class="sn">Andhra Pradesh</text>
+        <rect x="150" y="76" width="388" height="16" rx="4" fill="#2E7CB8"/>
+        <text x="546" y="89" class="sv">52.2</text>
+        <!-- J&K 51.0 -->
+        <text x="20" y="116" class="sn">Jammu &amp; Kashmir</text>
+        <rect x="150" y="104" width="379" height="16" rx="4" fill="#2E7CB8"/>
+        <text x="537" y="117" class="sv">51.0</text>
+        <!-- TN 46.9 -->
+        <text x="20" y="144" class="sn">Tamil Nadu</text>
+        <rect x="150" y="132" width="348" height="16" rx="4" fill="#0FA3A3"/>
+        <text x="506" y="145" class="sv">46.9</text>
+        <!-- Karnataka 45.7 -->
+        <text x="20" y="172" class="sn">Karnataka</text>
+        <rect x="150" y="160" width="340" height="16" rx="4" fill="#0FA3A3"/>
+        <text x="498" y="173" class="sv">45.7</text>
+        <!-- WB 45.5 -->
+        <text x="20" y="200" class="sn">West Bengal</text>
+        <rect x="150" y="188" width="338" height="16" rx="4" fill="#0FA3A3"/>
+        <text x="496" y="201" class="sv">45.5</text>
+        <!-- Maharashtra 33.6 -->
+        <text x="20" y="228" class="sn">Maharashtra</text>
+        <rect x="150" y="216" width="250" height="16" rx="4" fill="#37B68A"/>
+        <text x="408" y="229" class="sv">33.6</text>
+        <!-- India 27.2 -->
+        <text x="20" y="256" class="sn" style="font-weight:800">India</text>
+        <rect x="150" y="244" width="202" height="16" rx="4" fill="#E08A3C"/>
+        <text x="360" y="257" class="sv">27.2</text>
+        <!-- UP 19.5 -->
+        <text x="20" y="284" class="sn">Uttar Pradesh</text>
+        <rect x="150" y="272" width="145" height="16" rx="4" fill="#C9A227"/>
+        <text x="303" y="285" class="sv">19.5</text>
+        <!-- Bihar 13.2 -->
+        <text x="20" y="312" class="sn">Bihar</text>
+        <rect x="150" y="300" width="98" height="16" rx="4" fill="#C2563F"/>
+        <text x="256" y="313" class="sv">13.2</text>
+        <!-- Meghalaya 6.4 -->
+        <text x="20" y="340" class="sn">Meghalaya</text>
+        <rect x="150" y="328" width="48" height="16" rx="4" fill="#8B2635"/>
+        <text x="206" y="341" class="sv">6.4</text>
+      </svg>
+    </div>
+
+    <div class="ed-callout" style="border-left-color:var(--teal)"><p><b>Explore the data yourself:</b> the <a href="/tools/csection/">India C-Section Tracker</a> lets you click any state to see its rate, the private-versus-public split, and how it ranks. <a href="/tools/csection/">Open the tracker &rarr;</a></p></div>
+
+    <p>The trend points one way. Of all states and union territories, only two declined since NFHS-5 — Meghalaya and Ladakh. Everywhere else rose, several sharply: Sikkim by 18.3 points, Karnataka by 14.2, West Bengal by 12.9. Whatever is driving this is systemic and accelerating.</p>
+
+    <h2>Why the private sector runs so hot</h2>
+    <p>Look at the private-facility rates in isolation and the picture turns stark. Jammu &amp; Kashmir reports 90%. West Bengal, 87.7%. Telangana, 83.9%. Assam, 81.4%. Odisha, 76.8%. These are not clinical numbers. A surgical birth is more profitable, faster to schedule, and easier to defend against litigation than a long, unpredictable vaginal delivery. When the payment rewards the procedure, the procedure follows.</p>
+
+    <div class="ed-callout"><p>This is not a clinical-training problem. It is a <b>payment-design and audit problem</b> — and that changes which levers actually work.</p></div>
+
+    <h2>What actually moves this number</h2>
+    <p>If the driver were clinical, the fix would be more obstetric training. It isn't, so it won't be. The levers that bite are financial and informational:</p>
+    <p><b>Reimbursement parity.</b> Pay the same for a vaginal and a surgical birth. The moment the procedure stops paying more, the clinical default reasserts itself. This is the single highest-leverage move, and it sits with insurers and scheme designers, not doctors.</p>
+    <p><b>Mandatory facility-level disclosure.</b> Require every hospital to publish its own C-section rate. Sunlight on outliers — an 80%+ private rate next to a 17% public one — does what regulation alone cannot.</p>
+    <p><b>Robson-classification auditing.</b> Mandate second-opinion or Robson-group audits for private hospitals above a threshold. It turns "trust us" into "show us," the same shift that works everywhere else in quality assurance.</p>
+
+    <h2>The bottom line</h2>
+    <p>The actionable insight is not the 27.2% headline. It is that India's surgical-birth surge is concentrated in the private, fee-for-service segment — which makes it a question of how births are paid for and audited, not how doctors are trained. Fix the payment, expose the rates, and the clinical baseline near 17% is within reach. Leave the incentives untouched, and the next survey will read worse.</p>
+
+    <p class="ed-source">Source: NFHS-6 (2023-24) state and UT fact sheet compendium. Results are provisional; Manipur has no fact sheet in this release, so national figures exclude it.</p>

@@ -1,0 +1,68 @@
+.stage-row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+  margin: 14px 0;
+  padding: 16px 18px;
+  background: var(--tintT);
+  border-radius: 12px;
+}
+.stage-row .sr-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--grad);
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stage-row h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+.stage-row p {
+  font-size: 14px;
+  color: var(--body-c);
+  margin: 0;
+  line-height: 1.5;
+}
+.stage-row .done {
+  color: var(--teal);
+  font-weight: 800;
+}
+.edge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 26px 0;
+}
+.edge-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px 16px;
+  border-top: 4px solid var(--teal);
+}
+.edge-card h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.edge-card p {
+  font-size: 13.5px;
+  color: var(--body-c);
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width:600px) {
+  .edge-grid {
+    grid-template-columns: 1fr;
+  }
+}

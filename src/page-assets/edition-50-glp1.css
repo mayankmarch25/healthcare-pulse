@@ -1,0 +1,32 @@
+.battle-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: start;
+  margin: 12px 0;
+  padding: 16px 18px;
+  background: var(--tintT);
+  border-radius: 12px;
+}
+.battle-row .br-num {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--blue);
+}
+.battle-row h4 {
+  font-size: 15.5px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+.battle-row p {
+  font-size: 14px;
+  color: var(--body-c);
+  margin: 0;
+  line-height: 1.5;
+}
+[data-theme="dark"] .num-card, [data-theme="dark"] .battle-row, [data-theme="dark"] .author-box {
+  background: #16252C!important;
+  border-color: #25373F;
+}

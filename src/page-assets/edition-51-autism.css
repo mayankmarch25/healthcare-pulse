@@ -1,0 +1,53 @@
+.lens-card {
+  background: var(--tintT);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 12px 0;
+}
+.lens-card .l-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+}
+.lens-card h4 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 3px 0 6px;
+}
+.lens-card p {
+  font-size: 14px;
+  color: var(--body-c);
+  line-height: 1.55;
+  margin: 0;
+}
+.why-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  align-items: start;
+  margin: 12px 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--amber);
+  background: #FBF8F2;
+  border-radius: 0 12px 12px 0;
+}
+.why-row .wr-q {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--amberdk);
+}
+.why-row h4 {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+.why-row p {
+  font-size: 13.5px;
+  color: var(--body-c);
+  margin: 0;
+  line-height: 1.5;
+}

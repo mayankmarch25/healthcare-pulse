@@ -1,0 +1,26 @@
+---
+interface Props { label: string; seeAll: string;
+  items: { cat: string; href: string; ed: string; title: string }[]; }
+const { label, seeAll, items } = Astro.props;
+---
+{items.length > 0 && (
+<section class="related">
+  <div class="related-head">
+    <p class="related-label">{label}</p>
+    <div class="related-nav">
+      <a class="related-seeall" href={seeAll}>See all &rarr;</a>
+      <button class="rel-arrow" data-dir="-1" aria-label="Scroll left" type="button">&larr;</button>
+      <button class="rel-arrow" data-dir="1" aria-label="Scroll right" type="button">&rarr;</button>
+    </div>
+  </div>
+  <div class="related-grid">
+    {items.map(i => (
+      <a class={`related-card cat-${i.cat}`} href={i.href}>
+        <span class="rc-ed">{i.ed}</span>
+        <span class="rc-title">{i.title}</span>
+        <span class="rc-go">Read this perspective &rarr;</span>
+      </a>
+    ))}
+  </div>
+</section>
+)}

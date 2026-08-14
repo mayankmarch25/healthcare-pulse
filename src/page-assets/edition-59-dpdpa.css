@@ -1,0 +1,33 @@
+.dl-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--tintT);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 28px 0;
+  align-items: center;
+}
+.dl-bar .dl-label {
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 14px;
+  margin-right: 4px;
+}
+.dl-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 9px 16px;
+  border-radius: 999px;
+}
+.dl-btn:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}

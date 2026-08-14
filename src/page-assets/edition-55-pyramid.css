@@ -1,0 +1,24 @@
+.myth {
+  background: #FDECEA;
+  border-left: 4px solid #C0392B;
+  border-radius: 0 12px 12px 0;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.myth .m-wrong {
+  font-weight: 800;
+  color: #C0392B;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.myth p {
+  font-size: 14.5px;
+  color: var(--body-c);
+  margin: 0;
+  line-height: 1.55;
+}
+@media (max-width:600px) {
+  .num-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

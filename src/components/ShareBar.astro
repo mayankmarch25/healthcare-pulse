@@ -1,0 +1,11 @@
+---
+interface Props { shareText: string; }
+const { shareText } = Astro.props;
+---
+<div class="share-bar" data-share-text={shareText}>
+  <span class="share-label">Share this perspective:</span>
+  <a class="share-btn share-wa" id="shWa" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="share-btn share-li" id="shLi" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="share-btn share-x" id="shX" target="_blank" rel="noopener">X</a>
+  <button class="share-btn" id="shCopy" type="button">Copy link</button>
+</div>

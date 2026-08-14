@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+import EditionLayout from '../layouts/EditionLayout.astro';
+
+const bodies  = import.meta.glob('../bodies/*.html',      { query: '?raw', import: 'default', eager: true });
+const cssMap  = import.meta.glob('../page-assets/*.css',  { query: '?raw', import: 'default', eager: true });
+const jsMap   = import.meta.glob('../page-assets/*.js',   { query: '?raw', import: 'default', eager: true });
+
+export async function getStaticPaths() {
+  const editions = await getCollection('editions');
+  return editions.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const slug = entry.id;
+
+const bodyHtml   = entry.data.legacyBody  ? bodies[`../bodies/${slug}.html`]     : null;
+const pageCss    = entry.data.pageCss     ? cssMap[`../page-assets/${slug}.css`] : null;
+const pageScript = entry.data.pageScript  ? jsMap[`../page-assets/${slug}.js`]   : null;
+---
+<EditionLayout data={entry.data} slug={slug} bodyHtml={bodyHtml} pageCss={pageCss} pageScript={pageScript}>
+  <Content />
+</EditionLayout>

@@ -1,0 +1,32 @@
+.axt {
+  font: 600 13px 'IBM Plex Mono',monospace;
+  fill: #6E828C;
+}
+.vlab {
+  font: 700 15px 'Manrope',sans-serif;
+  fill: #1B3A4B;
+}
+.blab {
+  font: 600 13px 'Manrope',sans-serif;
+  fill: #37505B;
+}
+.ttl {
+  font: 700 14px 'Manrope',sans-serif;
+  fill: #1B3A4B;
+}
+.sn {
+  font: 600 13px 'Manrope',sans-serif;
+  fill: #37505B;
+}
+.sv {
+  font: 700 12px 'IBM Plex Mono',monospace;
+  fill: #1B3A4B;
+}
+.ttl2 {
+  font: 700 14px 'Manrope',sans-serif;
+  fill: #1B3A4B;
+}
+.cap {
+  font: 500 11px 'IBM Plex Mono',monospace;
+  fill: #6E828C;
+}

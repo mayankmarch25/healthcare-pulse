@@ -1,0 +1,40 @@
+name: Build and deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions: { contents: read, deployments: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      # Fails the build if any page grows past budget. This is the guard that
+      # stops the old copy-paste problem from creeping back in.
+      - name: Check page weight budget
+        run: |
+          FAIL=0
+          # Only the migrated editions are budgeted. The 26 not-yet-migrated
+          # pages are carried over as-is and are exempt until their turn comes.
+          for f in $(find dist -name 'edition-*.html'); do
+            KB=$(( $(stat -c%s "$f") / 1024 ))
+            if [ "$KB" -gt 120 ]; then echo "TOO BIG: $f = ${KB} KB (budget 120 KB)"; FAIL=1; fi
+          done
+          CSS=$(find dist/_astro -name '*.css' -exec stat -c%s {} + | awk '{s+=$1} END {print int(s/1024)}')
+          echo "Total CSS: ${CSS} KB"
+          if [ "$CSS" -gt 120 ]; then echo "CSS budget exceeded"; FAIL=1; fi
+          exit $FAIL
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=healthcare-pulse

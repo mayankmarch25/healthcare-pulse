@@ -1,0 +1,83 @@
+
+    <p class="lede">NFHS-6 puts India's fertility rate at <b>2.0</b> children per woman, below the replacement line. In cities it is <b>1.6</b>, which is European territory. The population is still rising on momentum, but the engine that drives long-run growth has already switched off. We are living in the gap between the cause and the consequence.</p>
+
+    <div class="fig">
+      <div class="fig-label">The line India just crossed</div>
+      <div class="fig-title">Every state against replacement</div>
+      <div class="fig-sub">Each state's total fertility rate versus the 2.1 replacement threshold. Left of the line, a population eventually shrinks. Sixteen of thirty-one states are already there.</div>
+      <div class="clegend" id="heroLegend"></div>
+      <canvas id="heroChart" height="150"></canvas>
+    </div>
+
+    <p class="eyebrow">01 &mdash; The engine</p>
+    <h2>The population is still rising. The thing that makes it rise is not.</h2>
+    <p>India's total fertility rate has fallen to 2.0, just under the 2.1 that a population needs to replace itself over time. The headcount will keep climbing for a couple more decades because of demographic momentum: a large young cohort is still moving through its childbearing years. But momentum is not growth. Once it runs out, the direction reverses, and nothing in this data suggests it won't.</p>
+    <p>This is not a projection or a warning about the future. It is already recorded in the sixth National Family Health Survey. The interesting part is not the national number. It is that the national average is a fiction, the midpoint between two countries moving at two very different speeds.</p>
+
+    <div class="statrow">
+      <div class="s"><div class="n">2.0</div><div class="l">National fertility rate, below the 2.1 replacement threshold for the first time</div></div>
+      <div class="s"><div class="n">1.6</div><div class="l">Urban fertility rate, on par with much of Western Europe</div></div>
+      <div class="s"><div class="n">16<small>/31</small></div><div class="l">States and UTs already below replacement fertility</div></div>
+    </div>
+
+    <p class="eyebrow">02 &mdash; Two Indias</p>
+    <h2>One number hiding two countries</h2>
+    <p>Group the states by region and a fault line appears. The South and Northeast crossed below replacement years ago. The East and the Central belt is where the growth still lives. This is not a rich-versus-poor gap. It is a time gap: the South is roughly one generation ahead of the East on the exact same curve.</p>
+
+    <div class="fig">
+      <div class="fig-label">Figure 1</div>
+      <div class="fig-title">Regional fertility, ranked</div>
+      <div class="fig-sub">Mean total fertility rate by region across the 31 covered states. The dashed line is replacement level (2.1).</div>
+      <canvas id="regionChart" height="150"></canvas>
+      <figcaption><b>Read this way:</b> four of six regions are already below replacement. Only the East (2.05) and Central India (2.00) still sit at or above the line, and both are falling. India's remaining population growth is concentrated in a shrinking cluster of states.</figcaption>
+    </div>
+
+    <p>Sikkim records a fertility rate of <b>1.0</b>, one of the lowest sub-national figures anywhere in the world. Kerala, Tamil Nadu, Karnataka, Goa, West Bengal and Delhi are all comfortably below replacement. The states still driving national growth, Bihar at 2.7 and Uttar Pradesh at 2.2, are now the exception, not the rule.</p>
+
+    <div class="ed-callout"><p>India did not fail to control its population. <b>It succeeded, and then kept going well past the point anyone planned for.</b></p></div>
+
+    <p class="eyebrow">03 &mdash; The dividend trap</p>
+    <h2>The states that got old before they got rich</h2>
+    <p>Here is the uncomfortable half of the demographic dividend story. The dividend is a window, not a gift, and in the South that window is closing. Kerala's fertility is 1.8, but more than a fifth of its people are already 60 or older, a share comparable to Japan two decades ago. Tamil Nadu, Goa, Himachal and Puducherry are close behind.</p>
+
+    <div class="fig">
+      <div class="fig-label">Figure 2</div>
+      <div class="fig-title">Low fertility, ageing population: the closing window</div>
+      <div class="fig-sub">Each dot is a state. Horizontal: share of population aged 60+. Vertical: fertility rate. The top-right quadrant is the "old before rich" zone.</div>
+      <canvas id="ageChart" height="300"></canvas>
+      <figcaption><b>Read this way:</b> states drift from bottom-left (young, high fertility) toward top-right (ageing, low fertility) as they complete the transition. The South is already clustered in the danger zone. <b>The healthcare system built around maternity and paediatrics is now facing a population that needs geriatric, chronic and palliative care instead.</b></figcaption>
+    </div>
+
+    <p>The strategic point for anyone allocating healthcare capital: the capital is still being deployed for the India of 2005. Delivery volumes, NICUs and paediatric wards anchor the private-hospital model, and in exactly the states with the most spending power, that base is now contracting.</p>
+
+    <p class="eyebrow">04 &mdash; The reframe</p>
+    <h2>Where fertility stays high, it is often not by choice</h2>
+    <p>This is the finding that should change the conversation. Across all 31 states, the single strongest correlate of high fertility is not poverty and not low education. It is unmet need for contraception: women who want to stop or delay childbearing but are not using any method.</p>
+
+    <div class="fig">
+      <div class="fig-label">Figure 3</div>
+      <div class="fig-title">Unmet contraception need vs fertility</div>
+      <div class="fig-sub">Each dot is a state. Horizontal: share of married women with an unmet need for contraception. Vertical: fertility rate. The strongest relationship measured on this dataset (r = +0.58).</div>
+      <canvas id="unmetChart" height="300"></canvas>
+      <figcaption><b>Read this way:</b> high-fertility states are not full of families who want more children. They are full of <b>women whose demand for contraception the system is failing to meet.</b> That reframes fertility decline from a persuasion problem into a service-delivery problem, and service-delivery problems are fixable.</figcaption>
+    </div>
+
+    <p>For contrast, health insurance coverage, the variable most people assume drives smaller urban families, has essentially no relationship with fertility across states (r = +0.06). Whatever is bringing Indian fertility down, it is not who pays for care. It is women's autonomy on one side and contraceptive access on the other.</p>
+
+    <p class="eyebrow">05 &mdash; So what</p>
+    <h2>Three shifts nobody is pricing in</h2>
+    <div class="row-item"><div class="ri-num">1</div><div><h4>The maternity-led hospital model is built on a shrinking base</h4><p>Delivery volumes anchor the private-hospital funnel in most Indian chains: labour and delivery brings the family in, everything else cross-sells from there. In the South and the metros, <b>that funnel is structurally contracting</b>, and the playbooks written a decade ago have not been repriced.</p></div></div>
+    <div class="row-item"><div class="ri-num">2</div><div><h4>Chronic and geriatric care is the growth market, and it is underbuilt</h4><p>As states finish the fertility transition, non-communicable disease replaces maternity as the system's main workload. Diabetes among women is climbing fastest in exactly the low-fertility states. <b>The demographic and disease transitions are two faces of one shift</b>, and capacity is lagging both.</p></div></div>
+    <div class="row-item"><div class="ri-num">3</div><div><h4>The federal map is quietly being redrawn</h4><p>Parliamentary seats are still frozen on 1971 population. When that freeze lifts, the states that controlled fertility earliest stand to lose relative representation to the states that did not. <b>The fertility transition is becoming a political one</b>, and healthcare funding formulas ride on the outcome.</p></div></div>
+
+    <div class="ed-callout"><p><b>Explore every state yourself.</b> The interactive fertility tracker sorts all 31 states by fertility, ageing, unmet need and education, with the correlations behind the transition. <a href="/tools/fertility/">Open the tracker &rarr;</a></p></div>
+
+    <div class="ed-callout"><p>India did not fail to control its population. It succeeded, and then kept going past the point anyone planned for. The problem is no longer too many births. It is <b>a country ageing at wildly different speeds</b>, with its healthcare capital, its hospital models and its political map all still calibrated for a growth story that has already ended.</p></div>
+
+<section id="s-src">
+<p class="eyebrow">06 &mdash; Sources</p>
+<h2>Sources and evidence status</h2>
+<p>What is officially published, and what is my analysis. Nothing above is presented as fact without one of these tags.</p>
+<div class="srcwrap"><div class="srcrow"><span class="srctag t-off">Official</span><div><b>NFHS-6 (2023-24), IIPS / MoHFW</b><span>State and national total fertility rates, urban and rural splits, the 60+ population share, unmet contraception need and education indicators used across every chart.</span></div></div><div class="srcrow"><span class="srctag t-anl">Analysis</span><div><b>Author's contribution</b><span>The regional groupings, the cross-sectional correlations across 31 states (Pearson's r), the ageing-versus-fertility framing, and all interpretive commentary.</span></div></div></div>
+<p class="srcnote"><b>Before citing externally:</b> NFHS-6 figures are survey estimates with sampling error. Correlations are cross-sectional across 31 states and do not establish causation.</p>
+</section>

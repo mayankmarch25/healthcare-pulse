@@ -1,0 +1,97 @@
+.ed-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+.ed-card {
+  border-radius: 14px;
+  padding: 22px 20px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+.ed-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.ed-card .badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+.ed-card ul {
+  list-style: none;
+  margin: 0;
+}
+.ed-card li {
+  font-size: 14.5px;
+  color: var(--body-c);
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.ed-card li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+.c-red h3 {
+  color: #C0392B;
+}
+.c-red .badge {
+  background: #C0392B;
+}
+.c-red li::before {
+  background: #C0392B;
+}
+.c-navy h3 {
+  color: var(--navy);
+}
+.c-navy .badge {
+  background: var(--navy);
+}
+.c-navy li::before {
+  background: var(--navy);
+}
+.c-blue h3 {
+  color: var(--blue);
+}
+.c-blue .badge {
+  background: var(--blue);
+}
+.c-blue li::before {
+  background: var(--blue);
+}
+.c-teal h3 {
+  color: var(--teal);
+}
+.c-teal .badge {
+  background: var(--teal);
+}
+.c-teal li::before {
+  background: var(--teal);
+}
+.ed-card li.flag {
+  color: #C0392B;
+  font-weight: 800;
+}
+@media (max-width:600px) {
+  .ed-grid {
+    grid-template-columns: 1fr;
+  }
+}

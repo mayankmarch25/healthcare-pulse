@@ -1,0 +1,29 @@
+.takeaway-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0;
+}
+.takeaway-card {
+  background: var(--tintT);
+  border-radius: 14px;
+  padding: 20px 18px;
+  border-left: 4px solid var(--teal);
+}
+.takeaway-card h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.takeaway-card p {
+  font-size: 14px;
+  color: var(--body-c);
+  line-height: 1.55;
+  margin: 0;
+}
+@media (max-width:600px) {
+  .takeaway-grid {
+    grid-template-columns: 1fr;
+  }
+}

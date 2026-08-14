@@ -1,0 +1,15 @@
+const dark=document.documentElement.getAttribute('data-theme')==='dark';
+Chart.defaults.font.family="'Manrope',system-ui,sans-serif";
+Chart.defaults.color=dark?'#AFC2C8':'#5A6B72';
+const GRID=dark?'rgba(175,194,200,.14)':'#E6EBEE';
+const TEAL='#0FA3A3',RED='#C2563F',AMBER='#E08A3C',NAVY='#1B3A4B',BLUE='#2E7CB8',PLUM='#7A5378';
+const refLine=(axis,val,label)=>({id:'r'+axis+val,afterDraw(ch){const s=ch.scales[axis];if(!s)return;const p=s.getPixelForValue(val),a=ch.chartArea,c=ch.ctx;c.save();c.setLineDash([5,4]);c.strokeStyle=dark?'#AFC2C8':NAVY;c.lineWidth=1.3;c.beginPath();if(axis==='y'){c.moveTo(a.left,p);c.lineTo(a.right,p);}else{c.moveTo(p,a.top);c.lineTo(p,a.bottom);}c.stroke();c.setLineDash([]);c.fillStyle=dark?'#AFC2C8':NAVY;c.font='700 10px Manrope';if(axis==='y')c.fillText(label,a.left+4,p-5);else c.fillText(label,p+5,a.top+11);c.restore();}});
+
+/* Fig 1: prevalence by source/method */
+new Chart(prevChart,{type:'bar',data:{labels:['India ages 2-<6 (INCLEN)','India ages 6-9 (INCLEN)','Global pooled (Zeidan)','WHO reference (2021)','US CDC ADDM (2025)'],datasets:[{data:[1.0,1.4,0.72,0.79,3.2],backgroundColor:[TEAL,TEAL,AMBER,AMBER,RED],borderRadius:5,barThickness:30}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.raw}% prevalence`}}},scales:{x:{min:0,max:3.5,grid:{color:GRID},ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:{font:{size:11}}}}}});
+
+/* Fig 2: diagnosis gap timeline (months) */
+new Chart(gapChart,{type:'bar',data:{labels:['Parents notice signs','Reliable diagnosis possible','Median diagnosis (urban)','Average diagnosis (India)'],datasets:[{data:[12,21,42,64],backgroundColor:[TEAL,TEAL,AMBER,RED],borderRadius:5,barThickness:30}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>[' parents often notice by 6-18 months',' autism reliably identifiable by 18-24 months',' median ~42 months at urban tertiary centres',' average ~64 months across India (LMIC)'][c.dataIndex]}}},scales:{x:{min:0,max:72,grid:{color:GRID},title:{display:true,text:'months from birth',font:{weight:600}}},y:{grid:{display:false},ticks:{font:{size:11}}}}},plugins:[refLine('x',24,'window closes ~24 mo')]});
+
+/* Fig 3: comorbidity */
+new Chart(comorbidChart,{type:'bar',data:{labels:['Autistic children with\na coexisting condition','All children with any NDD','Of those, with 2+ NDDs'],datasets:[{data:[79.6,12.0,21.7],backgroundColor:[RED,BLUE,AMBER],borderRadius:6,barThickness:56}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.raw}%`}}},scales:{y:{min:0,max:100,grid:{color:GRID},ticks:{callback:v=>v+'%'}},x:{grid:{display:false},ticks:{font:{size:11,weight:'600'}}}}}});

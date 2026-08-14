@@ -1,0 +1,41 @@
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+  margin: 26px 0;
+}
+.stage-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 14px;
+  border-top: 4px solid var(--teal);
+}
+.stage-num {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+}
+.stage-card h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 4px 0 6px;
+}
+.stage-card p {
+  font-size: 13px;
+  color: var(--body-c);
+  line-height: 1.5;
+  margin: 0;
+}
+@media (max-width:700px) {
+  .stages-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width:420px) {
+  .stages-grid {
+    grid-template-columns: 1fr;
+  }
+}
