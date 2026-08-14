@@ -145,9 +145,14 @@ Two things remain worth doing, neither urgent:
    `autism-dashboard.html` is 144 KB, mostly numbers. Pull the data into JSON
    and the pages get small and the data becomes reusable.
 
-These pages still work exactly as before, they are just not yet templated:
-`about.html`, `about-rich.html`, `podcast.html`, `/ask/`, `/research/`,
-`/research/thrive-sdoh/`, `/index-tool/`, and the six `/tools/*` pages.
+Now templated and sharing the one stylesheet: the homepage, `/archive/`,
+`/perspectives/`, the eight `/topics/*` pages, `/ask/`, `/research/` and
+`/index-tool/`.
+
+Still standalone with their own inline CSS, working exactly as before:
+`about.html`, `about-rich.html`, `podcast.html`, `/research/thrive-sdoh/`
+and the six `/tools/*` tracker pages. These have always had their own custom
+navigation rather than the site header, so that is original behaviour.
 
 
 ## 7. Read this too

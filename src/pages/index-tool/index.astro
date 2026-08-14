@@ -1,0 +1,13 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import body from '../../page-assets/index-tool.html?raw';
+import pageCss from '../../page-assets/index-tool.css?raw';
+import pageJs from '../../page-assets/index-tool.js?raw';
+---
+<PageLayout title={"Interactive trackers \u2014 Healthcare Pulse"}
+            description={"Interactive trackers built on NFHS, MoHFW and National Health Accounts data."}
+            canonical={"https://mayankmadhur.in/index-tool/"}>
+  {pageCss.trim() && <Fragment set:html={`<style>${pageCss}</style>`} />}
+  <Fragment set:html={body} />
+  {pageJs.trim() && <Fragment set:html={`<script>${pageJs}</script>`} />}
+</PageLayout>

@@ -1,30 +1,4 @@
-<section class="ama-wrap">
-  <div class="ama-head">
-    <p class="eyebrow">ASK HEALTHCARE PULSE</p>
-    <h1>Ask me anything</h1>
-    <p class="ama-sub">Type a healthcare question. I'll point you to the editions that cover it. If I haven't written about it yet, you can suggest it as a future topic.</p>
-  </div>
 
-  <div class="ama-box">
-    <input type="text" id="amaInput" class="ama-input" placeholder="e.g. What's happening with pharma pricing? or How does ABHA work?" autocomplete="off">
-    <button id="amaBtn" class="ama-btn" type="button">Ask →</button>
-  </div>
-
-  <div class="ama-suggest">
-    <span class="ama-sg-label">TRY:</span>
-    <button class="ama-chip" type="button">pharma pricing</button>
-    <button class="ama-chip" type="button">data privacy law</button>
-    <button class="ama-chip" type="button">medical tourism</button>
-    <button class="ama-chip" type="button">health insurance</button>
-    <button class="ama-chip" type="button">ayushman bharat</button>
-  </div>
-
-  <div id="amaResult" class="ama-result"></div>
-
-  <p class="ama-direct">Prefer not to use the box? Write directly: <a href="mailto:mayank@mayankmadhur.in">mayank@mayankmadhur.in</a></p>
-</section>
-
-<script>
 (function(){
   var EDITIONS = [
     {ed:63,url:"/edition-63-csection-nfhs6.html",title:"India's C-section surge is a payment-design problem",cat:"Policy",kw:"csection caesarean c-section nfhs nfhs-6 surgical birth delivery private hospital public facility maternal who ceiling reimbursement parity robson disclosure telangana bihar obstetric fee for service",sum:"NFHS-6 puts India's C-section rate at 27.2%, but private hospitals run at 54.1% against 16.9% in public. A 3x gap clinical need can't explain. The fix is reimbursement parity, rate disclosure, and Robson auditing, not more training."},
@@ -223,9 +197,3 @@
     chip.addEventListener('click', function(){ input.value = chip.textContent; ask(); input.focus(); });
   });
 })();
-</script>
-<style>
-.ama-direct{text-align:center;margin:26px auto 0;font-size:14.5px;color:var(--muted,#5A6B72)}
-.ama-direct a{color:var(--teal,#0FA3A3);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(15,163,163,.4)}
-.ama-direct a:hover{border-bottom-color:var(--teal,#0FA3A3)}
-</style>

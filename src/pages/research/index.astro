@@ -1,0 +1,13 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import body from '../../page-assets/research.html?raw';
+import pageCss from '../../page-assets/research.css?raw';
+import pageJs from '../../page-assets/research.js?raw';
+---
+<PageLayout title={"Research \u2014 Healthcare Pulse"}
+            description={"Research, frameworks and data work from Mayank Madhur."}
+            canonical={"https://mayankmadhur.in/research/"}>
+  {pageCss.trim() && <Fragment set:html={`<style>${pageCss}</style>`} />}
+  <Fragment set:html={body} />
+  {pageJs.trim() && <Fragment set:html={`<script>${pageJs}</script>`} />}
+</PageLayout>

@@ -1,0 +1,13 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import body from '../../page-assets/ask.html?raw';
+import pageCss from '../../page-assets/ask.css?raw';
+import pageJs from '../../page-assets/ask.js?raw';
+---
+<PageLayout title={"Ask Healthcare Pulse"}
+            description={"Ask a healthcare question and find the Healthcare Pulse editions that cover it."}
+            canonical={"https://mayankmadhur.in/ask/"}>
+  {pageCss.trim() && <Fragment set:html={`<style>${pageCss}</style>`} />}
+  <Fragment set:html={body} />
+  {pageJs.trim() && <Fragment set:html={`<script>${pageJs}</script>`} />}
+</PageLayout>
