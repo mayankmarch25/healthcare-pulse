@@ -22,6 +22,8 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      # Guards against the copy-paste problem returning. If a page or the
+      # stylesheet balloons, this goes red.
       - name: Page weight budget
         run: |
           FAIL=0
@@ -33,6 +35,22 @@ jobs:
           echo "Shared CSS: ${CSS} KB (budget 120)"
           if [ "$CSS" -gt 120 ]; then echo "CSS budget exceeded"; FAIL=1; fi
           exit $FAIL
+
+      # Catches the two mistakes that actually shipped: Jekyll tags leaking
+      # to visitors, and pages rendering without the site shell.
+      - name: Sitemap points only at real pages
+        run: |
+          FAIL=0
+          test -f dist/sitemap.xml || { echo "sitemap.xml missing"; exit 1; }
+          grep -oP '(?<=<loc>)[^<]+' dist/sitemap.xml | while read -r U; do
+            P="${U#https://mayankmadhur.in}"
+            case "$P" in
+              */) T="dist${P}index.html" ;;
+              *)  T="dist${P}" ;;
+            esac
+            [ -f "$T" ] || { echo "sitemap 404: $U"; exit 1; }
+          done
+          echo "sitemap URLs: $(grep -c '<loc>' dist/sitemap.xml)"
 
       - name: No template leaks or broken pages
         run: |

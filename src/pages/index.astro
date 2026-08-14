@@ -4,6 +4,13 @@ import PageLayout from '../layouts/PageLayout.astro';
 import template from '../page-assets/home.html?raw';
 import pageCss from '../page-assets/home.css?raw';
 import pageJs from '../page-assets/home.js?raw';
+import { getImage } from 'astro:assets';
+import profileSrc from '../assets/profile.jpg';
+
+// Serve the photo at 2x its display size in WebP, instead of one oversized file.
+// .pc-photo renders at 72px, .cc-photo at 42px. Source is 2x for retina.
+const photoBig = await getImage({ src: profileSrc, width: 144, height: 144, format: 'webp' });
+const photoSmall = await getImage({ src: profileSrc, width: 84, height: 84, format: 'webp' });
 
 const posts = (await getCollection('editions'))
   .sort((a, b) => (b.data.postDate ?? '').localeCompare(a.data.postDate ?? ''));
@@ -86,7 +93,11 @@ const html = template
   .replace('<!--HP_YEARS-->', yearOpts)
   .replace('<!--HP_GRID-->', grid)
   .replace('<!--HP_COVERAGE-->', coverage)
-  .replaceAll('<!--HP_COUNT-->', String(total));
+  .replaceAll('<!--HP_COUNT-->', String(total))
+  .replace('<!--HP_PHOTO-->',
+    `<img src="${photoBig.src}" alt="Mayank Madhur" class="pc-photo" width="72" height="72" />`)
+  .replace('<!--HP_PHOTO2-->',
+    `<img src="${photoSmall.src}" alt="Mayank Madhur" class="cc-photo" width="42" height="42" loading="lazy" />`);
 ---
 <PageLayout title="Healthcare Pulse — Digital health, decoded"
             description="The real story behind India's healthcare numbers, for operators, investors and policy people who want signal, not press releases. One deep dive every Friday, by Mayank Madhur."

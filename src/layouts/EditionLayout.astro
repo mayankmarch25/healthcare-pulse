@@ -13,6 +13,11 @@ const { data, slug, bodyHtml, pageCss, pageScript } = Astro.props;
 const url = `https://mayankmadhur.in/${slug}.html`;
 const ogImage = new URL(ogDefault.src, Astro.site).href;
 const catLabel = data.categoryLabel ?? data.category.replace('-', ' ');
+// wordCount is a ranking and credibility signal; compute it from the real prose.
+const wordCount = (bodyHtml ?? '')
+  .replace(/<(script|style|svg)\b[\s\S]*?<\/\1>/g, ' ')
+  .replace(/<[^>]+>/g, ' ')
+  .split(/\s+/).filter(Boolean).length;
 
 const article = {
   '@context': 'https://schema.org', '@type': 'Article',
@@ -21,10 +26,32 @@ const article = {
   datePublished: data.datePublished,
   dateModified: data.dateModified ?? data.datePublished,
   url, mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-  image: ogImage, inLanguage: 'en',
-  author: { '@type': 'Person', name: 'Mayank Madhur',
-    url: 'https://www.linkedin.com/in/mayank-madhur/',
-    jobTitle: 'Practice Leader, Healthcare & Life Sciences, HFS Research' },
+  image: ogImage,
+  inLanguage: 'en',
+  articleSection: catLabel,
+  keywords: [catLabel, 'Indian healthcare', 'health policy', ...(data.tags ?? [])].join(', '),
+  wordCount,
+  isAccessibleForFree: true,
+  isPartOf: {
+    '@type': 'Periodical', name: 'Healthcare Pulse',
+    issn: undefined, url: 'https://mayankmadhur.in/',
+    publisher: { '@type': 'Organization', name: 'Healthcare Pulse' },
+  },
+  author: {
+    '@type': 'Person',
+    name: 'Mayank Madhur',
+    url: 'https://mayankmadhur.in/about.html',
+    jobTitle: 'Practice Leader, Healthcare & Life Sciences, HFS Research',
+    worksFor: { '@type': 'Organization', name: 'HFS Research', url: 'https://www.hfsresearch.com/' },
+    knowsAbout: ['Healthcare policy', 'Digital health', 'Health financing',
+                 'Indian healthcare systems', 'Health data'],
+    // sameAs is what links this author entity to the same person elsewhere.
+    // Without it, every page asserts an unconnected "Mayank Madhur".
+    sameAs: [
+      'https://www.linkedin.com/in/mayank-madhur/',
+      'https://mayankmadhur.in/about.html',
+    ],
+  },
   publisher: { '@type': 'Organization', name: 'Healthcare Pulse',
     logo: { '@type': 'ImageObject', url: ogImage } },
 };

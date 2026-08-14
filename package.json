@@ -4,11 +4,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/make-sitemap.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
     "@fontsource-variable/manrope": "^5.1.1",
     "@fontsource/ibm-plex-mono": "^5.1.1",
     "astro": "^5.6.1"
