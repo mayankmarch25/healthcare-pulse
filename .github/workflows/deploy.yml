@@ -38,6 +38,14 @@ jobs:
 
       # Catches the two mistakes that actually shipped: Jekyll tags leaking
       # to visitors, and pages rendering without the site shell.
+      # The build strips stale files so readers never see them. This warns you
+      # that they are still sitting in the repo and could be tidied.
+      - name: Warn about leftover files in the repo
+        run: |
+          git ls-files public | while read -r F; do
+            [ -f "$F" ] || echo "::warning file=$F::stale file, removed at build time. Safe to delete from the repo."
+          done
+
       - name: Sitemap points only at real pages
         run: |
           FAIL=0
