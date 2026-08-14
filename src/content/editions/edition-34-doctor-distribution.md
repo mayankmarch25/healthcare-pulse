@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India's 1:811 doctor ratio beats WHO's benchmark, but public hospitals face 1:11,000. The crisis is maldistribution, not shortage. State playbooks (Andhra, Odisha, Chhattisgarh) show what works."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2025-11-21"
 legacyBody: true
 pageCss: false
 pageScript: false

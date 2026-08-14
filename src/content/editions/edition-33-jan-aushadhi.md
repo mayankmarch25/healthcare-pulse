@@ -192,6 +192,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Medicines are ~two-thirds of Indian families' health spend. Jan Aushadhi's 16,900+ stores sell generics 50-90% cheaper, and the next leap, e-Aushadhi + ABDM + NHCX, is building a digital medicine network."
+displayCategory: "Pharma"
+tags: ["Digital Health"]
+postDate: "2025-11-14"
 legacyBody: true
 pageCss: false
 pageScript: false

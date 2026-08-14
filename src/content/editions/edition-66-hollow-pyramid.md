@@ -56,6 +56,10 @@ related:
     ed: "ED. 39"
     title: "2025 Year in Review: learnings and forecasts"
 needsChart: true
+excerpt: "Two of every three specialist posts at India's rural CHCs sit empty, and the shortfall worsens the higher you climb the referral pyramid. Not a doctor shortage, a design failure, and a map of where insured patients are already leaking into private care."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2026-07-17"
 legacyBody: true
 pageCss: true
 pageScript: true

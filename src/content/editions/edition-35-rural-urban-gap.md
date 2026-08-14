@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "65% of Indians are rural but 70-75% of healthcare infrastructure is urban. Only 3% of specialists practice rurally. The gap is a design brief, and a massive digital build-out opportunity."
+displayCategory: "Policy"
+tags: ["Strategy"]
+postDate: "2025-11-28"
 legacyBody: true
 pageCss: false
 pageScript: false

@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "By 2035 the US faces an 80,000+ physician shortage as chronic disease and aging surge. AI, wearables and smart-home tech enable a shift from reactive demand-based to proactive need-based care."
+displayCategory: "Digital Health"
+tags: ["Strategy"]
+postDate: "2025-05-16"
 legacyBody: true
 pageCss: false
 pageScript: false

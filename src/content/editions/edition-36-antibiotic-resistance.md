@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India is now a primary contributor to global AMR: 83% of patients carry multidrug-resistant organisms, 58,000 newborns die yearly from resistant sepsis. Kerala's Operation AMRITH shows it can be tamed."
+displayCategory: "Policy"
+tags: []
+postDate: "2025-12-05"
 legacyBody: true
 pageCss: false
 pageScript: false

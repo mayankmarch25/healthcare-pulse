@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "India's winning health model is national rails + state playbooks + trusted village relationships. With 1M+ ASHAs, 344M eSanjeevani consults and 16,900 Jan Aushadhi stores, locality defines performance."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2025-08-22"
 legacyBody: true
 pageCss: false
 pageScript: false

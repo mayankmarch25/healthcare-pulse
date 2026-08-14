@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Since 2005 India built platforms for Universal Health Coverage, but deep state and rural-urban inequities endure (IMR ranges 3-46 across states). Six pillars for a healthier, more equitable future."
+displayCategory: "Policy"
+tags: []
+postDate: "2025-07-25"
 legacyBody: true
 pageCss: false
 pageScript: false

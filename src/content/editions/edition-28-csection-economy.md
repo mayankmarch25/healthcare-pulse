@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India's C-section rate doubled from 1-in-10 to 1-in-5 (over 1-in-2 in Telangana). Overuse harms mothers and drains budgets. Five behaviour levers, and the IT tools, to get to right surgery, right reason."
+displayCategory: "Policy"
+tags: []
+postDate: "2025-10-10"
 legacyBody: true
 pageCss: false
 pageScript: false

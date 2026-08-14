@@ -32,6 +32,10 @@ related:
     ed: "ED. 4"
     title: "Tariff Shock: Why India must build healthcare resilience now"
 needsChart: false
+excerpt: "How the Middle East conflict hits Indian healthcare indirectly: energy shocks, costlier hospital operations, device supply disruders, and a medical-tourism slowdown."
+displayCategory: "Geopolitics"
+tags: ["Policy"]
+postDate: "2026-03-13"
 legacyBody: true
 pageCss: false
 pageScript: false

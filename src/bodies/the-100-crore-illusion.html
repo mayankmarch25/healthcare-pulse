@@ -1,0 +1,88 @@
+
+    <p class="lede">India just crossed a milestone almost no country could attempt. 90 crore digital health accounts. 100 crore linked health records. One of the fastest digital health rollouts the world has ever seen. And yet the single number that would prove the system actually works has quietly disappeared from the government's own announcements.</p>
+
+    <span class="eyebrow-act">Act 1 · The triumph</span>
+    <h2>The achievement is real. The reading is where it goes wrong.</h2>
+    <p>By mid-2026, the Ayushman Bharat Digital Mission had real numbers to celebrate. ABHA accounts grew from under 15 crore in 2021 to more than 90 crore in 2026, a six-fold rise. Linked records doubled from 50 crore to 100 crore in just fifteen months. Several states crossed 90% population saturation, and nearly half of all accounts are held by women.</p>
+    <p>Building a national patient identifier for 1.4 billion people is the single hardest problem in health data, and India solved it first. <span class="hl">This is genuinely world-leading.</span> The problem is only how it is being read.</p>
+
+    <figure class="chart-fig">
+      <h4>ABHA accounts: a sixfold rise in five years</h4>
+      <div class="cbox"><canvas id="cAdopt"></canvas></div>
+      <div class="cap">One line, one unit: the number of ABHA accounts created, in crore. From under 15 crore in 2021 to over 90 crore in 2026. Impressive scale. Whether people actually use those accounts is the next chart.</div>
+    </figure>
+
+    <span class="eyebrow-act">Act 2 · The turn</span>
+    <h2>The number that disappeared</h2>
+    <p>Every figure being celebrated measures <strong>supply</strong>: IDs issued, documents linked, facilities registered. None of them measures <strong>demand</strong> — which is whether anyone actually uses the system. So here is the number nobody puts on a slide.</p>
+
+    <blockquote>In December 2023, against roughly 70 crore accounts, only about <b>50 lakh people</b> were actively using the ABHA app. On the order of half of one percent.</blockquote>
+
+    <figure class="chart-fig">
+      <h4>Accounts created vs people actually using them (2023)</h4>
+      <div class="compare">
+        <div class="crow"><div class="lab"><span>ABHA accounts</span><span>~70 crore</span></div><div class="track"><div class="bar t" data-w="100"></div></div></div>
+        <div class="crow"><div class="lab"><span>Active app users</span><span>~0.5 crore</span></div><div class="track"><div class="bar a" data-w="0.7"></div></div></div>
+      </div>
+      <div class="cap">Same scale. Active usage is so small next to account creation that it barely registers — which is why the figure quietly left the milestone releases.</div>
+    </figure>
+
+    <p>Since then, the government stopped foregrounding active-usage figures and pivoted entirely to ever-larger linkage counts. <span class="hl">When an organisation tracks a metric, then stops publishing it in favour of a bigger-sounding one, the simplest explanation is that the original number was not flattering.</span></p>
+
+    <span class="eyebrow-act">Act 3 · The core insight</span>
+    <h2>EMR versus EHR, and why India is doing it backwards</h2>
+    <p>This is the part most coverage skips, and it is the heart of the matter. An <strong>EMR</strong>, an electronic medical record, is one hospital's internal digital chart. It was never designed to leave the building. An <strong>EHR</strong>, an electronic health record, is the patient's full history stitched across every provider, designed to travel and be shared with consent.</p>
+    <p>The word that separates them is <strong>interoperability</strong>. An EMR is a silo. An EHR is a network. In the West, hospitals digitised their internal records first, then networked them. The foundation came before the network.</p>
+    <p>India is doing the reverse. ABHA is building a national EHR layer on top of a country where the EMR foundation barely exists. You are networking records that, in two thirds of facilities, were never properly created in the first place.</p>
+
+    <figure class="chart-fig">
+      <div class="cgrid">
+        <div class="cbox"><canvas id="cEmr"></canvas></div>
+        <div>
+          <h4>The foundation gap</h4>
+          <p class="cap" style="font-size:15px;color:var(--body-c)">Only about 35% of hospitals run any EMR, and much of that is billing software rather than true clinical records. A national EHR built on absent EMRs is a beautiful network with very little real signal flowing through it.</p>
+        </div>
+      </div>
+    </figure>
+
+    <span class="eyebrow-act">Act 4 · The market mirror</span>
+    <h2>Largest ID system on earth. Two percent of the market.</h2>
+    <p>India runs the world's largest digital health ID system, yet holds only about <strong>2.1% of the global EHR market</strong> — a market worth roughly $36 billion in 2025.</p>
+    <p>The layers grow at completely different speeds. Linked records grew about 75% in the last year. The overall digital health market grows around 20% a year. But the EHR and EMR software layer that actually creates the records crawls at 6 to 8%. <span class="hl">The demand signal was built before the supply.</span></p>
+
+    <figure class="chart-fig">
+      <div class="cgrid">
+        <div class="cbox"><canvas id="cLayer"></canvas></div>
+        <div class="cbox"><canvas id="cShare"></canvas></div>
+      </div>
+      <div class="cap">Left: approximate annual growth by layer of the stack. Right: India's share of the global EHR market despite ~18% of the world's population.</div>
+    </figure>
+
+    <span class="eyebrow-act">Act 5 · Why it persists</span>
+    <h2>Four forces hold the gap open</h2>
+    <ol class="reasons">
+      <li><div class="num">1</div><div class="rt"><strong>The average launders the dormancy.</strong> Roughly one record per account sounds healthy, but records concentrate in a few active urban patients. The silent majority of accounts hold almost nothing.</div></li>
+      <li><div class="num">2</div><div class="rt"><strong>Linkage overcounts low-value documents.</strong> Much of the 100 crore are vaccination certificates and scheme stubs. A certificate is a record, but it tells a treating doctor almost nothing.</div></li>
+      <li><div class="num">3</div><div class="rt"><strong>The fetch is invisible.</strong> A doctor at one hospital retrieving a record made at another is the only thing that proves interoperability. That number appears in no milestone release.</div></li>
+      <li><div class="num">4</div><div class="rt"><strong>Supply is the constraint.</strong> Only ~35% of hospitals run EMRs, and a per-transaction incentive propping up linkage tapers in March 2026. Velocity bought by subsidy is not organic adoption.</div></li>
+    </ol>
+
+    <span class="eyebrow-act">In fairness</span>
+    <h2>The optimist may be right about direction</h2>
+    <p>Rails-first is the correct sequence. UPI itself looked dormant for two to three years before it went exponential, so judging this on 2023 usage may be premature. Network effects compound, and the inclusion gains are real. <span class="hl">The bull case is right about direction. The bear case is right about the present claim.</span> The danger is declaring victory on a milestone that measures the wrong thing.</p>
+
+    <span class="eyebrow-act">The fix</span>
+    <h2>Stop measuring vanity. Start measuring value.</h2>
+    <div class="swap">
+      <div class="row"><div class="v">ABHA accounts created</div><div class="ar">→</div><div class="w">Monthly active users who accessed a record</div></div>
+      <div class="row"><div class="v">Records linked</div><div class="ar">→</div><div class="w">Consented cross-provider fetches per month</div></div>
+      <div class="row"><div class="v">Solutions integrated</div><div class="ar">→</div><div class="w">Integrations enabling outbound structured data</div></div>
+      <div class="row"><div class="v">Total documents</div><div class="ar">→</div><div class="w">Share that is FHIR-structured, machine-readable</div></div>
+    </div>
+
+    <div class="closing">
+      <p>India did the hard, unglamorous thing first and built the rails. But the easy metric is near the top of its usefulness, while the hard one has barely begun.<br><br>The story is not that India crossed 100 crore records. Everyone has that. <b>It is that the number which will define India's digital health decade is the one the government used to publish, and quietly stopped.</b></p>
+    </div>
+
+    <p class="cta-q">What would you measure to prove a national digital health system actually works?</p>
+    <div class="tags">#DigitalHealth · #HealthTech · #India · #EHR · #Interoperability · #AyushmanBharat</div>

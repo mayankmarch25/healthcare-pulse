@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "CGHS's first overhaul in 15 years: revised rates for ~2,000 procedures, a new C-DAC digital HMIS, PAN-based IDs, and inclusion of transgender dependents, benefiting 4.6 million employees and pensioners."
+displayCategory: "Policy"
+tags: []
+postDate: "2025-10-17"
 legacyBody: true
 pageCss: false
 pageScript: false

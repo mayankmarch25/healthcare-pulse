@@ -192,6 +192,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Semaglutide went generic and prices collapsed to ~Rs1,290/month. India's GLP-1 market moved from premium to mass-market in one quarter. The molecule is now a commodity; the care model is not."
+displayCategory: "Pharma"
+tags: ["Strategy"]
+postDate: "2026-03-27"
 legacyBody: true
 pageCss: true
 pageScript: false

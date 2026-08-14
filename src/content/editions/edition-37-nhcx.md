@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "NHCX is India's UPI moment for health claims: a national FHIR-based protocol that cuts claim cost from ~Rs500 to <Rs15, enforces a 3-hour discharge clock, and unlocks mass-market insurance."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2025-12-12"
 legacyBody: true
 pageCss: false
 pageScript: false

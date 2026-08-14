@@ -100,6 +100,10 @@ related:
     ed: "ED. 14"
     title: "National Health Policy 2017 – Still Setting the Agenda in 2025"
 needsChart: false
+excerpt: "The Triple Aim is wobbling, costs soar, experience stagnates, US life expectancy fell to 1996 levels, because it forgot equity. The Quadruple Aim adds equity as the foundation of sustainable care."
+displayCategory: "Policy"
+tags: ["Strategy"]
+postDate: "2025-05-23"
 legacyBody: true
 pageCss: false
 pageScript: false

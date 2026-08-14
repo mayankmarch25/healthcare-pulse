@@ -1,0 +1,25 @@
+---
+const { entry } = Astro.props;
+const d = entry.data;
+const slug = (d.displayCategory ?? 'general').toLowerCase().replace(/\s+/g, '-');
+const date = d.postDate
+  ? new Date(d.postDate + 'T00:00:00Z').toLocaleDateString('en-GB',
+      { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+  : '';
+const excerpt = d.excerpt.length > 130 ? d.excerpt.slice(0, 127).trimEnd() + '…' : d.excerpt;
+---
+<a class={`card cat-${slug}`} href={`/${entry.id}.html`}>
+  <div class="card-banner">
+    <svg viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path d="M0 84 H86 l11 -19 13 36 16 -52 14 60 12 -38 10 13 H230 l11 -19 13 36 16 -52 14 60 12 -38 10 13 H400"
+        fill="none" stroke="rgba(255,255,255,.85)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    {d.edition && <span class="card-ed">ED. {d.edition}</span>}
+  </div>
+  <div class="card-body">
+    <p class="card-meta">{date} &middot; {d.displayCategory}</p>
+    <h2>{d.title}</h2>
+    <p class="card-excerpt">{excerpt}</p>
+    <div class="card-foot"><span class="card-read">Read perspective &rarr;</span></div>
+  </div>
+</a>

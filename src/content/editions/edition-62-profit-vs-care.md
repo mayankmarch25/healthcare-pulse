@@ -28,6 +28,10 @@ related:
     ed: "ED. 61"
     title: "The 100 Crore Illusion"
 needsChart: false
+excerpt: "Margins and patient care pull against each other, but it's a design problem boards can fix, not an ethics problem they can only worry about. Five aims, how money flows, four Indian cases, and six board actions."
+displayCategory: "Governance"
+tags: []
+postDate: "2026-06-19"
 legacyBody: true
 pageCss: false
 pageScript: false

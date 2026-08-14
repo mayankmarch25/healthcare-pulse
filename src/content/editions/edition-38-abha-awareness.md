@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "India created ~80 crore ABHA IDs but a Maharashtra study found only 4% ever used ABHA services. The gap isn't infrastructure, it's awareness. Why 2026 must treat awareness as infrastructure."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2025-12-19"
 legacyBody: true
 pageCss: false
 pageScript: false

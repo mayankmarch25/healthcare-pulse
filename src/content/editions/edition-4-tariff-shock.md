@@ -32,6 +32,10 @@ related:
     ed: "ED. 6"
     title: "New Tariffs Threaten US Health Systems While Health Plans Skate By"
 needsChart: false
+excerpt: "A 26% US tariff on Indian medical devices is a stress test, not just a trade spat. It threatens diagnostics costs, rural hospitals and PMJAY/ESIC. India's 4-point survival plan, starting with local manufacturing."
+displayCategory: "Geopolitics"
+tags: ["Policy"]
+postDate: "2025-04-25"
 legacyBody: true
 pageCss: false
 pageScript: false

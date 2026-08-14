@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "48.2% of physicians reported burnout in 2023. It's not a wellness problem, it's a systemic signal of inefficiency. Treat it as a strategic KPI and borrow from aviation, tech and the military to fix the system."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2025-04-11"
 legacyBody: true
 pageCss: false
 pageScript: false

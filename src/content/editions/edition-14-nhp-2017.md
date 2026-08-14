@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India's NHP 2017 still guides budgets and Ayushman Bharat. Five enterprise takeaways: digital health infrastructure, PPPs, workforce upskilling, R&D in devices/generics, and population health surveillance."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2025-07-04"
 legacyBody: true
 pageCss: false
 pageScript: false

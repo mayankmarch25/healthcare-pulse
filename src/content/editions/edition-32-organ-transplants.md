@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India hit ~18,900 organ transplants in 2024, #3 globally, but donation is still under 1 per million. Policy reform and a digital stack (NOTTO, Vidiyal, blockchain pilots) are reshaping transplants."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2025-11-07"
 legacyBody: true
 pageCss: false
 pageScript: false

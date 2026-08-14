@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India and the EU concluded their largest-ever FTA in January 2026, removing tariffs on 90%+ of goods. For healthcare it's a long-term structural reset on device costs, drug access, and pharma exports."
+displayCategory: "Policy"
+tags: ["Strategy"]
+postDate: "2026-01-30"
 legacyBody: true
 pageCss: false
 pageScript: false

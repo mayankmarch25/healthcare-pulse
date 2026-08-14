@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Union Budget 2026 crosses Rs1 lakh crore for healthcare and treats it as an economic growth engine, biopharma, workforce, mental health. But spending is still ~0.3% of GDP and execution will decide outcomes."
+displayCategory: "Policy"
+tags: ["Strategy"]
+postDate: "2026-02-13"
 legacyBody: true
 pageCss: false
 pageScript: false

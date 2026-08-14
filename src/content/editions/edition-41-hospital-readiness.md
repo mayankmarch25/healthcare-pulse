@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "India built the digital health rails (ABDM, NHCX, DPDP) but only ~1-2% of hospitals are onboarded to NHCX. Hospital readiness, not policy intent, is the real bottleneck."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2026-01-16"
 legacyBody: true
 pageCss: false
 pageScript: false

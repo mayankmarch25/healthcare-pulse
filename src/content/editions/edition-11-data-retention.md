@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "Healthcare stores data for 7-30 years but 90%+ is never reused, inflating cost and breach risk. GDPR and DPDP say store only as long as needed. Estonia's federated model shows the way: shrink to secure."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2025-06-13"
 legacyBody: true
 pageCss: false
 pageScript: false

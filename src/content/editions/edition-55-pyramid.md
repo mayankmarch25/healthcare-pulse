@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "While headlines obsess over new AIIMS and hospital IPOs, India is rebuilding healthcare from the bottom up. The pyramid, eight numbers that tell the real story, and why prevention beats capacity."
+displayCategory: "Policy"
+tags: ["Strategy"]
+postDate: "2026-05-01"
 legacyBody: true
 pageCss: true
 pageScript: false

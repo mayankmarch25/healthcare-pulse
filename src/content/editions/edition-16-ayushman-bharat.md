@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Ayushman Bharat is the world's largest government health assurance scheme: 55 crore covered, Rs5 lakh per family, 1.6 lakh upgraded centres. An enterprise playbook for hospitals, insurers and health-tech."
+displayCategory: "Policy"
+tags: []
+postDate: "2025-07-18"
 legacyBody: true
 pageCss: false
 pageScript: false

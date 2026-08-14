@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "RMNCAH+N is a lifecycle business, not a one-off sale. From fertility to adolescence to nutrition, enterprises that build for continuity own the patient journey and compound lifetime value."
+displayCategory: "Strategy"
+tags: []
+postDate: "2025-08-08"
 legacyBody: true
 pageCss: false
 pageScript: false

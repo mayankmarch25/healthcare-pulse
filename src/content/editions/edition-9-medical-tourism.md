@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "India's medical tourism is set to leap from $6bn to $35bn by 2027 (20%+ CAGR), with 700,000+ arrivals in 2024. Four pillars, affordability, accreditation, English care and e-visas, drive the boom."
+displayCategory: "Strategy"
+tags: []
+postDate: "2025-05-30"
 legacyBody: true
 pageCss: false
 pageScript: false

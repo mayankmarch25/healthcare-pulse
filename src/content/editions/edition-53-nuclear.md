@@ -32,6 +32,10 @@ related:
     ed: "ED. 4"
     title: "Tariff Shock: Why India must build healthcare resilience now"
 needsChart: false
+excerpt: "India's Prototype Fast Breeder Reactor achieved first criticality. Why it makes India the only democracy running commercial fast breeder tech, and a thorium pathway for 400+ years of low-carbon power."
+displayCategory: "Geopolitics"
+tags: []
+postDate: "2026-04-17"
 legacyBody: true
 pageCss: true
 pageScript: false

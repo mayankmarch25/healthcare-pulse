@@ -27,6 +27,10 @@ export const collections = {
       related: z.array(z.object({
         cat: z.string(), href: z.string(), ed: z.string(), title: z.string(),
       })).default([]),
+      excerpt: z.string().default(''),
+      displayCategory: z.string().default('Policy'),
+      tags: z.array(z.string()).default([]),
+      postDate: z.string().optional(),
       needsChart: z.boolean().default(false),
       legacyBody: z.boolean().default(false),
       pageCss: z.boolean().default(false),

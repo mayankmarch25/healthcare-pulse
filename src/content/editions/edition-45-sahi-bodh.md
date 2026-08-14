@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "At the India AI Impact Summit 2026, the government launched SAHI (AI strategy) and BODH (a privacy-preserving benchmarking platform), India's first structured blueprint for responsible healthcare AI."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2026-02-20"
 legacyBody: true
 pageCss: false
 pageScript: false

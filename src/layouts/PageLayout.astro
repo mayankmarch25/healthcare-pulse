@@ -1,0 +1,48 @@
+---
+import '../styles/hp.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Subscribe from '../components/Subscribe.astro';
+import ogDefault from '../assets/og-default.jpg';
+import shellUrl from '../scripts/shell.js?url';
+
+interface Props {
+  title: string; description: string; canonical: string;
+  showSubscribe?: boolean;
+}
+const { title, description, canonical, showSubscribe = true } = Astro.props;
+const ogImage = new URL(ogDefault.src, Astro.site).href;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="author" content="Mayank Madhur" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Healthcare Pulse" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImage} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content={ogImage} />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script is:inline>
+    (function(){try{if(localStorage.getItem('hp-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
+  </script>
+</head>
+<body id="top">
+  <div id="prog"></div>
+  <SiteHeader />
+  <main><slot /></main>
+  {showSubscribe && <Subscribe />}
+  <SiteFooter />
+  <script is:inline src={shellUrl} defer></script>
+  <script is:inline data-goatcounter="https://mayankmadhur.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "India's diagnostics market is moving from lab business to platform business, doubling by the early 2030s, consolidating into national chains, and becoming a multi-tower wallet for IT and data services."
+displayCategory: "Strategy"
+tags: ["Digital Health"]
+postDate: "2026-01-23"
 legacyBody: true
 pageCss: false
 pageScript: false

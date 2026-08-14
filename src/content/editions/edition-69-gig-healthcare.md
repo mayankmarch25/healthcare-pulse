@@ -53,6 +53,10 @@ related:
     ed: "ED. 53"
     title: "India just cracked the code on 400 years of energy…"
 needsChart: true
+excerpt: "No, not the problem people think it fixes. Gig platforms solve scheduling; India's workforce crisis is distribution and financing. It is a capacity instrument, not an equity instrument. And underneath sits an accountability problem nobody has written down: when a home nurse takes instructions from a platform, a hospital and a family, who is responsible when something goes wrong?"
+displayCategory: "Governance"
+tags: ["Strategy"]
+postDate: "2026-08-07"
 legacyBody: true
 pageCss: false
 pageScript: true

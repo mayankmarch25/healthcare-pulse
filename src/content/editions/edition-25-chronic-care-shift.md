@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "India's disease burden has pivoted from infections to chronic and mental health conditions, the West's transition in fast-forward. Five enterprise plays, from chronic care to ABDM-leveraged triage."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2025-09-19"
 legacyBody: true
 pageCss: false
 pageScript: false

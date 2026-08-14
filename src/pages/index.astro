@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import template from '../page-assets/home.html?raw';
+import pageCss from '../page-assets/home.css?raw';
+import pageJs from '../page-assets/home.js?raw';
+
+const posts = (await getCollection('editions'))
+  .sort((a, b) => (b.data.postDate ?? '').localeCompare(a.data.postDate ?? ''));
+
+const esc = (t = '') => String(t)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const catSlug = (c = 'general') => c.toLowerCase().replace(/\s+/g, '-');
+const trunc = (t = '', n = 130) => t.length > n ? t.slice(0, n - 3).trimEnd() + '…' : t;
+const fmt = (d) => d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB',
+  { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : '';
+const fmtLong = (d) => d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB',
+  { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).toUpperCase() : '';
+const readMin = (t = '') => { const w = t.split(/\s+/).length; return w < 200 ? 3 : Math.floor(w / 200); };
+
+// --- latest edition card ---
+const p = posts[0];
+const latest = `<a class="latest-card" href="/${p.id}.html">
+      <div class="lc-meta">
+        <span class="lc-ed">ED. ${p.data.edition}</span>
+        <span class="lc-when">LATEST &middot; ${fmtLong(p.data.postDate)}</span>
+        <span class="lc-cat">${esc(p.data.displayCategory)}</span>
+      </div>
+      <h2 class="lc-title">${esc(p.data.title)}</h2>
+      <p class="lc-dek">${esc(trunc(p.data.excerpt, 165))}</p>
+      <span class="lc-go">Read this edition &rarr;</span>
+    </a>`;
+
+// --- year dropdown ---
+const years = [...new Set(posts.map((e) => (e.data.postDate ?? '').slice(0, 4)).filter(Boolean))]
+  .sort().reverse();
+const yearOpts = years.map((y) => `<option value="${y}">${y}</option>`).join('');
+
+// --- full post grid ---
+const grid = posts.map((e) => {
+  const d = e.data;
+  const topic = [d.displayCategory, ...d.tags].filter(Boolean).join(', ');
+  return `<a class="card reveal cat-${catSlug(d.displayCategory)}"
+     data-title="${esc(d.title.toLowerCase())}"
+     data-excerpt="${esc(d.excerpt.toLowerCase())}"
+     data-year="${(d.postDate ?? '').slice(0, 4)}"
+     data-topic="${esc(topic)}"
+     href="/${e.id}.html">
+    <div class="card-banner">
+      <svg viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path d="M0 84 H86 l11 -19 13 36 16 -52 14 60 12 -38 10 13 H230 l11 -19 13 36 16 -52 14 60 12 -38 10 13 H400"
+          fill="none" stroke="rgba(255,255,255,.85)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="card-ed">ED. ${d.edition}</span>
+    </div>
+    <div class="card-body">
+      <p class="card-meta">${fmt(d.postDate)} &middot; ${esc(d.displayCategory)}</p>
+      <h2>${esc(d.title)}</h2>
+      <p class="card-excerpt">${esc(trunc(d.excerpt))}</p>
+      <div class="card-foot">
+        <span class="card-read">Read perspective &rarr;</span>
+        <span class="card-views" data-views-key="ed${d.edition}">${readMin(d.excerpt)} min read</span>
+      </div>
+    </div>
+  </a>`;
+}).join('\n');
+
+// --- coverage bars ---
+const CATS = ['Policy','Strategy','Digital Health','Geopolitics','Governance','Pharma','Biotech'];
+const total = posts.length;
+const coverage = CATS.map((cat) => {
+  const c = posts.filter((e) => e.data.displayCategory === cat).length;
+  if (c === 0) return '';
+  const pct = Math.floor((c * 100) / total);
+  return `<div class="stat-row">
+          <span class="stat-name">${cat}</span>
+          <div class="stat-track">
+            <div class="stat-fill cat-${catSlug(cat)}" data-pct="${pct}" style="width:0%"></div>
+          </div>
+          <span class="stat-val">${pct}%<span class="stat-count"> &middot; ${c}</span></span>
+        </div>`;
+}).join('\n');
+
+const html = template
+  .replace('<!--HP_LATEST-->', latest)
+  .replace('<!--HP_YEARS-->', yearOpts)
+  .replace('<!--HP_GRID-->', grid)
+  .replace('<!--HP_COVERAGE-->', coverage)
+  .replaceAll('<!--HP_COUNT-->', String(total));
+---
+<PageLayout title="Healthcare Pulse — Digital health, decoded"
+            description="The real story behind India's healthcare numbers, for operators, investors and policy people who want signal, not press releases. One deep dive every Friday, by Mayank Madhur."
+            canonical="https://mayankmadhur.in/"
+            showSubscribe={false}>
+  <Fragment set:html={`<style>${pageCss}</style>`} />
+  <Fragment set:html={html} />
+  <Fragment set:html={`<script>${pageJs}</script>`} />
+</PageLayout>

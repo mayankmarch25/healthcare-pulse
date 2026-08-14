@@ -1,0 +1,43 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../../layouts/PageLayout.astro';
+import EditionCard from '../../../components/EditionCard.astro';
+
+const TOPICS = {
+  'policy': 'Policy', 'strategy': 'Strategy', 'digital-health': 'Digital Health',
+  'geopolitics': 'Geopolitics', 'governance': 'Governance',
+  'pharma': 'Pharma', 'biotech': 'Biotech', 'general': 'General',
+};
+
+export async function getStaticPaths() {
+  return Object.keys({
+    'policy': 1, 'strategy': 1, 'digital-health': 1, 'geopolitics': 1,
+    'governance': 1, 'pharma': 1, 'biotech': 1, 'general': 1,
+  }).map((topic) => ({ params: { topic } }));
+}
+
+const { topic } = Astro.params;
+const label = TOPICS[topic];
+const all = await getCollection('editions');
+
+// Jekyll matched on category OR tag, then sorted newest first. Same rule here.
+const posts = all
+  .filter((e) => e.data.displayCategory === label || e.data.tags.includes(label))
+  .sort((a, b) => (b.data.postDate ?? '').localeCompare(a.data.postDate ?? ''));
+---
+<PageLayout title={`${label} — Healthcare Pulse`}
+            description={`Every Healthcare Pulse edition on ${label}. Newest first.`}
+            canonical={`https://mayankmadhur.in/topics/${topic}/`}>
+  <section class="topic-wrap">
+    <div class="topic-head">
+      <p class="eyebrow">TOPIC</p>
+      <h1>{label}</h1>
+      <p class="topic-sub">Every Healthcare Pulse edition on {label}. Newest first.</p>
+      <a class="topic-back" href="/perspectives/">&larr; All perspectives</a>
+    </div>
+    <div class="post-grid">
+      {posts.map((e) => <EditionCard entry={e} />)}
+    </div>
+    {posts.length === 0 && <p class="topic-empty">No editions in this topic yet.</p>}
+  </section>
+</PageLayout>

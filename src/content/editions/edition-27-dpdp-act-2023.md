@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India's first comprehensive data protection law carries penalties up to Rs250 crore. For hospitals, payers and enterprises it means redesigning consent and security, and a chance to turn compliance into trust."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2025-10-03"
 legacyBody: true
 pageCss: false
 pageScript: false

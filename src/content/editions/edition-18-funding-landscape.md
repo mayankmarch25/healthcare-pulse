@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "India's health system is a puzzle of public (MoHFW, Defence, Railways) and private funding. Before investing, map the money flows, a tailored playbook for CSR teams, startups, IT firms and investors."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2025-08-01"
 legacyBody: true
 pageCss: false
 pageScript: false

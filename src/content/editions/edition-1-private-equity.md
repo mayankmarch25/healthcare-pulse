@@ -84,6 +84,10 @@ related:
     ed: "ED. 2"
     title: "Tackling physician burnout requires reimagining healthcare"
 needsChart: false
+excerpt: "Post-COVID PE surged to $5-6bn/year, Blackstone, Temasek, KKR buying hospital chains. PE can transform Indian healthcare, but only if smart regulation keeps it patient-centric and avoids US-style pitfalls."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2025-04-04"
 legacyBody: true
 pageCss: false
 pageScript: false

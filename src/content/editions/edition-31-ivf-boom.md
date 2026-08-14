@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "India's fertility market is a $1.6bn enterprise growing 15-18% yearly, with 3.3 lakh IVF cycles set to double by 2030. PE money, AI embryo grading and corporate fertility perks are reshaping the sector."
+displayCategory: "Strategy"
+tags: ["Digital Health"]
+postDate: "2025-10-31"
 legacyBody: true
 pageCss: false
 pageScript: false

@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "Value-Based Care largely failed in the US ($15,000+ per person, up to 20% revenue in compliance). India can't absorb it. Healthcare is local, India should adapt best practices, not adopt models blindly."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2025-05-02"
 legacyBody: true
 pageCss: false
 pageScript: false

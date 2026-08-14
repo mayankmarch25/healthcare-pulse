@@ -86,6 +86,10 @@ related:
     ed: "ED. 1"
     title: "Private Equity Can Transform India's Healthcare"
 needsChart: false
+excerpt: "Cancer is a sliver of India's disease burden, yet oncology is the No.1 thing private hospitals are building. The reason isn't medicine, it's ARPOB. Three proofs (including Max Healthcare's own smoking-gun disclosure), the five-layer economics of a cancer patient, and why the chronic burden stays under-built."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2026-06-26"
 legacyBody: true
 pageCss: false
 pageScript: false

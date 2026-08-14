@@ -56,6 +56,10 @@ related:
     ed: "ED. 53"
     title: "India just cracked the code on 400 years of energy…"
 needsChart: true
+excerpt: "The insurance debate argues about how much cover to add. Wrong axis. India runs four health systems under one name, each breaking at a different point in the same six-step chain, so no single national fix reaches all four. One comes closer than the rest: generic medicines by molecule name. It is the cheapest lever available, and nothing else reaches an affluent household and a scheme-covered one on the same day."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2026-07-31"
 legacyBody: true
 pageCss: false
 pageScript: true

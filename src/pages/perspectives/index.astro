@@ -1,0 +1,86 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import pageCss from '../../page-assets/perspectives.css?raw';
+import pageJs from '../../page-assets/perspectives.js?raw';
+
+const all = await getCollection('editions');
+const posts = all.sort((a, b) => (b.data.postDate ?? '').localeCompare(a.data.postDate ?? ''));
+const years = [...new Set(posts.map((p) => (p.data.postDate ?? '').slice(0, 4)).filter(Boolean))].sort().reverse();
+const TOPICS = ['Digital Health','Policy','Strategy','Biotech','Pharma','Geopolitics','Governance'];
+const CHIPS = [['digital-health','Digital Health'],['policy','Policy'],['strategy','Strategy'],
+               ['pharma','Pharma'],['biotech','Biotech'],['geopolitics','Geopolitics'],['governance','Governance']];
+
+const fmt = (d) => d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB',
+  { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : '';
+const trunc = (t) => t.length > 130 ? t.slice(0, 127).trimEnd() + '…' : t;
+const readMin = (t) => { const w = t.split(/\s+/).length; return w < 200 ? 3 : Math.floor(w / 200); };
+---
+<PageLayout title="Perspectives — Healthcare Pulse"
+            description="Every issue of Healthcare Pulse. Sharp, contrarian reads on India's digital health story and global healthcare."
+            canonical="https://mayankmadhur.in/perspectives/">
+  <Fragment set:html={`<style>${pageCss}</style>`} />
+  <section class="persp-head">
+    <p class="eyebrow">ALL PERSPECTIVES</p>
+    <h1>Every issue of Healthcare Pulse</h1>
+    <p class="persp-sub">Sharp, contrarian reads on India's digital health story and global healthcare. Search or filter by topic and year.</p>
+  </section>
+
+  <section class="filter-bar">
+    <div class="filter-inner">
+      <input type="text" id="fSearch" class="f-search" placeholder="Search perspectives..." />
+      <select id="fYear" class="f-select">
+        <option value="">All years</option>
+        {years.map((y) => <option value={y}>{y}</option>)}
+      </select>
+      <select id="fTopic" class="f-select">
+        <option value="">All topics</option>
+        {TOPICS.map((t) => <option value={t}>{t}</option>)}
+      </select>
+      <button id="fBtn" class="f-btn" type="button">Search</button>
+      <button id="fClear" class="f-clear" type="button">Clear</button>
+    </div>
+    <p id="fCount" class="f-count"></p>
+  </section>
+
+  <div class="topic-chips">
+    <span class="tc-label">BROWSE BY TOPIC:</span>
+    {CHIPS.map(([slug, label]) => <a class="topic-chip" href={`/topics/${slug}/`}>{label}</a>)}
+    <a class="topic-chip topic-chip-theme" href="#" data-search="autism">Autism</a>
+    <a class="topic-chip" href="/archive/">Compact archive list &rarr;</a>
+  </div>
+
+  <section class="post-grid" id="postGrid">
+    {posts.map((e) => {
+      const d = e.data;
+      const catSlug = (d.displayCategory ?? 'general').toLowerCase().replace(/\s+/g, '-');
+      const topicAttr = [d.displayCategory, ...d.tags].filter(Boolean).join(', ');
+      return (
+        <a class={`card reveal cat-${catSlug}`}
+           data-title={d.title.toLowerCase()}
+           data-excerpt={d.excerpt.toLowerCase()}
+           data-year={(d.postDate ?? '').slice(0, 4)}
+           data-topic={topicAttr}
+           href={`/${e.id}.html`}>
+          <div class="card-banner">
+            <svg viewBox="0 0 400 140" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path d="M0 84 H86 l11 -19 13 36 16 -52 14 60 12 -38 10 13 H230 l11 -19 13 36 16 -52 14 60 12 -38 10 13 H400"
+                fill="none" stroke="rgba(255,255,255,.85)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {d.edition && <span class="card-ed">ED. {d.edition}</span>}
+          </div>
+          <div class="card-body">
+            <p class="card-meta">{fmt(d.postDate)} &middot; {d.displayCategory}</p>
+            <h2>{d.title}</h2>
+            <p class="card-excerpt">{trunc(d.excerpt)}</p>
+            <div class="card-foot">
+              <span class="card-read">Read perspective &rarr;</span>
+              <span class="card-views">{readMin(d.excerpt)} min read</span>
+            </div>
+          </div>
+        </a>
+      );
+    })}
+  </section>
+  <Fragment set:html={`<script>${pageJs}</script>`} />
+</PageLayout>

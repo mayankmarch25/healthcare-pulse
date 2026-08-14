@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "NFHS-5 shows ~24% of Indian adults are overweight or obese, and rising. Why obesity is becoming a national economic challenge, and the digital-health opportunity it creates."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2026-03-06"
 legacyBody: true
 pageCss: false
 pageScript: false

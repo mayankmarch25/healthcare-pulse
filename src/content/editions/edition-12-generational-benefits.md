@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "By 2033 millennials and Gen Z will be 73%+ of the workforce, digital-first, prevention-focused, wellness-driven. The shift from sick care to smart care is here; benefits must signal culture, not just coverage."
+displayCategory: "Strategy"
+tags: []
+postDate: "2025-06-20"
 legacyBody: true
 pageCss: false
 pageScript: false

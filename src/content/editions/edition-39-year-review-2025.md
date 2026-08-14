@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "Closing 38 editions of 2025: five foundational truths, execution trumps funding, digital needs embedding, the future is hybrid, equity is sustainability, and trust is the hardest constraint."
+displayCategory: "Strategy"
+tags: []
+postDate: "2025-12-26"
 legacyBody: true
 pageCss: false
 pageScript: false

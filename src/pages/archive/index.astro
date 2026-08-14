@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const posts = (await getCollection('editions'))
+  .sort((a, b) => (b.data.postDate ?? '').localeCompare(a.data.postDate ?? ''));
+const fmt = (d) => d ? new Date(d + 'T00:00:00Z').toLocaleDateString('en-GB',
+  { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : '';
+---
+<PageLayout title="Archive — Healthcare Pulse"
+            description="Every edition of Healthcare Pulse, newest first."
+            canonical="https://mayankmadhur.in/archive/">
+  <section class="archive-wrap">
+    <div class="archive-head">
+      <p class="eyebrow">THE FULL ARCHIVE</p>
+      <h1>Every issue of Healthcare Pulse</h1>
+      <p class="archive-sub">All editions, newest first. Use the search on the homepage to filter by topic or year.</p>
+    </div>
+    <ul class="archive-list">
+      {posts.map((e) => (
+        <li class="archive-item">
+          <a href={`/${e.id}.html`}>
+            <span class="ai-ed">ED. {e.data.edition}</span>
+            <span class="ai-title">{e.data.title}</span>
+            <span class="ai-meta">{fmt(e.data.postDate)} &middot; {e.data.displayCategory}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</PageLayout>

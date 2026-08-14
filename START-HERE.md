@@ -123,6 +123,7 @@ layout, so the site is visually consistent either way.
 | First visit to one edition | about 924 KB | about 86 KB |
 | Cacheable share of the payload | 7% | 93% |
 | Time to publish an edition | around an hour of HTML editing | around ten minutes of writing |
+| Updating homepage, archive, topics | hand-edit a card into each | automatic |
 
 **91% less to download on a first visit.** The logo was the single biggest
 culprit, not the code.
@@ -131,34 +132,23 @@ culprit, not the code.
 
 ## 6. Still to do
 
-I migrated the 68 edition pages. These 26 pages are **not yet migrated** and
-still live as hand-written HTML:
+The list pages are now generated from `src/content/editions/`, so adding an
+edition automatically updates the homepage, archive, perspectives and the topic
+pages. You no longer hand-add a card every Friday.
 
-`index.html`, `archive.html`, `perspectives.html`, `about.html`,
-`about-rich.html`, `podcast.html`, `research.html`, `thesis.html`, `ask.html`,
-`tools-hub.html`, `health-stack-tool.html`, `health-value-chain.html`,
-`which-india.html`, `the-100-crore-illusion.html`, the four trackers
-(`autism-dashboard.html`, `csection-tracker.html`, `fertility-tracker.html`,
-`rural-pyramid-tracker.html`), and the eight `topic-*.html` pages.
+Two things remain worth doing, neither urgent:
 
-Recommended order for these:
+1. **`ask.html`** ships 38 KB of JavaScript to every page and matches on literal
+   keywords you maintain by hand. Replace with Pagefind, which builds its index
+   at deploy time. Cuts the JS and removes the keyword lists.
+2. **The four trackers** hardcode their data in the HTML.
+   `autism-dashboard.html` is 144 KB, mostly numbers. Pull the data into JSON
+   and the pages get small and the data becomes reusable.
 
-1. **Index, archive, perspectives, topic pages.** These are lists of editions.
-   Once migrated they generate themselves from `src/content/editions/`, so you
-   stop hand-adding a card every week. This is the biggest remaining time save.
-2. **About, podcast, research, thesis.** Simple content pages, quick.
-3. **The four trackers.** Their data is hardcoded in the HTML.
-   `autism-dashboard.html` is 144 KB, most of it numbers. Pull the data into
-   JSON files first, then the pages get small and the data becomes reusable.
-4. **ask.html.** Its search ships 38 KB of JavaScript to every page and matches
-   on literal keywords you maintain by hand. Replace with Pagefind, which
-   builds the index automatically at deploy time and loads on demand.
+These pages still work exactly as before, they are just not yet templated:
+`about.html`, `about-rich.html`, `podcast.html`, `/ask/`, `/research/`,
+`/research/thrive-sdoh/`, `/index-tool/`, and the six `/tools/*` pages.
 
-Also worth doing: the 70 stub pages under `/posts/` currently duplicate your
-editions with no canonical tag, which splits your search signal. They should
-either redirect or carry a canonical pointing at the real edition.
-
----
 
 ## 7. Read this too
 

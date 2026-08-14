@@ -56,6 +56,10 @@ related:
     ed: "ED. 7"
     title: "Embrace Technology to Address the Healthcare Delivery Crisis"
 needsChart: false
+excerpt: "Autism is up 317% since 2000 (1 in 36 US children), with societal cost nearing $461bn by 2025. IoT, wearables, smart homes, remote monitoring, enables personalized care for a spectrum that's never one-size-fits-all."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2025-04-18"
 legacyBody: true
 pageCss: false
 pageScript: false

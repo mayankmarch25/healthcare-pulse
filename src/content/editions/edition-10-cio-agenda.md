@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "Health plan CIOs face declining enrollment and shrinking reimbursements. The reset: stop fixing IT, become a growth architect, ten moves aligning technology to the Quadruple Aim of cost, experience, health and equity."
+displayCategory: "Strategy"
+tags: ["Digital Health"]
+postDate: "2025-06-06"
 legacyBody: true
 pageCss: false
 pageScript: false

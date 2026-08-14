@@ -192,6 +192,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India's pharma market grew 8.1% last year. Only 1.5% came from real demand. Why the other 6.6% is a slow-moving crisis, and how the industry is quietly becoming FMCG."
+displayCategory: "Pharma"
+tags: ["Strategy"]
+postDate: "2026-05-15"
 legacyBody: true
 pageCss: true
 pageScript: false

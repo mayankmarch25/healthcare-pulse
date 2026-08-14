@@ -1,0 +1,6 @@
+
+  .persp-head { max-width: 1340px; margin: 0 auto; padding: 48px clamp(20px,4vw,48px) 8px; }
+  .persp-head .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; color: var(--teal); }
+  .persp-head h1 { font-size: clamp(28px,4vw,40px); font-weight: 800; color: var(--navy); margin: 8px 0 6px; line-height: 1.1; }
+  .persp-sub { font-size: 15.5px; color: var(--muted); max-width: 60ch; line-height: 1.6; }
+  [data-theme="dark"] .persp-head h1 { color: #E8F4F4; }

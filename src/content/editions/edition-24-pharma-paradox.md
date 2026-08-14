@@ -192,6 +192,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India supplies 20% of global generics and 60% of vaccines, yet imports 65-70% of APIs from China, spends only 6-8% on R&D, and leaves 23% unable to afford essential medicines. Five contradictions decoded."
+displayCategory: "Pharma"
+tags: ["Strategy"]
+postDate: "2025-09-12"
 legacyBody: true
 pageCss: false
 pageScript: false

@@ -32,6 +32,10 @@ related:
     ed: "ED. 4"
     title: "Tariff Shock: Why India must build healthcare resilience now"
 needsChart: false
+excerpt: "US healthcare costs rose 146% in 25 years while incomes rose <15%. New tariffs hit break-even hospitals hard while lean health plans barely feel it. For health systems, innovation is now existential."
+displayCategory: "Geopolitics"
+tags: ["Strategy"]
+postDate: "2025-05-09"
 legacyBody: true
 pageCss: false
 pageScript: false

@@ -1,10 +1,12 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
+  integrations: [sitemap()],
   site: 'https://mayankmadhur.in',
   // Emit /edition-70-swasth-bharat.html, not /edition-70-swasth-bharat/index.html.
   // This keeps every existing URL byte-identical so search rankings survive.
-  build: { format: 'file', inlineStylesheets: 'never' },
+  build: { format: 'preserve', inlineStylesheets: 'never' },
   markdown: { smartypants: false },
   // Force the shared script out to its own cached file instead of inlining
   // a copy into all 68 pages.

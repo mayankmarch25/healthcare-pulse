@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "The US coverage model is being rewritten: self-insured employers rise (117M to 122M), group insurance declines, ACA marketplaces grow, and the uninsured rate climbs. Traditional payers lose centrality."
+displayCategory: "Strategy"
+tags: []
+postDate: "2025-06-27"
 legacyBody: true
 pageCss: false
 pageScript: false

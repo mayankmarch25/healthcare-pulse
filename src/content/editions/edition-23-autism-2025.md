@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Autism prevalence is up 300% since 2000; ~18 million Indians are on the spectrum. With costs nearing $1 trillion and neurodiverse unemployment at 30-40%, inclusion is both a responsibility and ROI-positive."
+displayCategory: "Policy"
+tags: ["Strategy"]
+postDate: "2025-09-05"
 legacyBody: true
 pageCss: false
 pageScript: false

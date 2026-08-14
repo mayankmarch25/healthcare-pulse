@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "The Act, in force since November 2025, flipped the asymmetry between provider and patient. The \"file\" the hospital owned for 50 years is now legally the patient's. Five stakeholder snapshots of what actually changed."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2026-05-29"
 legacyBody: true
 pageCss: true
 pageScript: false

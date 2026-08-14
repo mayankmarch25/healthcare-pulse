@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "140 million consultations in, eSanjeevani is the foundation of India's hybrid 'phygital' care model, and a sleeping giant of monetization for SaaS, cloud, telehealth-diagnostics bundles and AI."
+displayCategory: "Digital Health"
+tags: ["Strategy"]
+postDate: "2025-08-15"
 legacyBody: true
 pageCss: false
 pageScript: false

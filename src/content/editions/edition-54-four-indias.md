@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "Why \"pan-India\" is usually a lie. India's healthcare market isn't one market, it's four, each with different economics, payers, and failure modes. The framework and where the next decade will be won."
+displayCategory: "Strategy"
+tags: []
+postDate: "2026-04-24"
 legacyBody: true
 pageCss: true
 pageScript: false

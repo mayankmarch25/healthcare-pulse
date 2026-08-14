@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "India has the digital rails and policy momentum (ABDM, SAHI, BODH) to scale healthcare AI. But data quality, regulation depth and frontline capacity will decide whether it's universal or elite-only."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2026-02-27"
 legacyBody: true
 pageCss: false
 pageScript: false

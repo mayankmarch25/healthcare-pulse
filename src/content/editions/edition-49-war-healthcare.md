@@ -32,6 +32,10 @@ related:
     ed: "ED. 4"
     title: "Tariff Shock: Why India must build healthcare resilience now"
 needsChart: false
+excerpt: "The real disruption isn't AI, it's conflict. War breaks the three assumptions healthcare was built on, and is shifting care from place-based to flow-based."
+displayCategory: "Geopolitics"
+tags: ["Strategy"]
+postDate: "2026-03-20"
 legacyBody: true
 pageCss: false
 pageScript: false

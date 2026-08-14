@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "International patients are knocking. Mid-tier hospitals aren't converting. What Tier-1 chains figured out about medical tourism orchestration, and what most CEOs are still missing."
+displayCategory: "Strategy"
+tags: []
+postDate: "2026-05-08"
 legacyBody: true
 pageCss: true
 pageScript: false

@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "197 million Indians (1 in 7) live with a mental health condition, yet only ~1% of the health budget goes to it. Tele-MANAS and the 2017 Act laid foundations; five enterprise opportunities can scale care."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2025-09-26"
 legacyBody: true
 pageCss: false
 pageScript: false

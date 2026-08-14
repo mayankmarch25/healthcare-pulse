@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "Healthcare is a balloon: squeeze cost and outcomes bulge out; chase outcomes and costs explode. The fix isn't squeezing harder, it's rebalancing with upstream investment, tight ops and smart tech."
+displayCategory: "Strategy"
+tags: []
+postDate: "2025-08-29"
 legacyBody: true
 pageCss: false
 pageScript: false

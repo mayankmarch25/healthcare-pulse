@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "India built the world's largest preventive health infrastructure: 1.8 lakh AAMs, 834M ABHA IDs, Tele-MANAS at scale. The execution gap, the three gaps that decide the outcome, and where the real opportunity lies."
+displayCategory: "Policy"
+tags: ["Digital Health"]
+postDate: "2026-04-10"
 legacyBody: true
 pageCss: true
 pageScript: false

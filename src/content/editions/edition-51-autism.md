@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Families don't struggle because care doesn't exist. They struggle because nothing connects. Why India's autism crisis is a design failure, not a funding gap, through five frameworks and the 5 Whys."
+displayCategory: "Policy"
+tags: []
+postDate: "2026-04-03"
 legacyBody: true
 pageCss: true
 pageScript: false

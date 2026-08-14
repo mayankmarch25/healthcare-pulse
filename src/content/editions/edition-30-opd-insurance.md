@@ -84,6 +84,10 @@ related:
     ed: "ED. 1"
     title: "Private equity can transform India's healthcare, if done right"
 needsChart: false
+excerpt: "OOPE fell to 39.4% but Indians still pay ~half of health costs out-of-pocket. Insurance growth misses the mark because it ignores OPD, where 65-70% of spending happens. The fix: an OPD-first product."
+displayCategory: "Strategy"
+tags: ["Policy"]
+postDate: "2025-10-24"
 legacyBody: true
 pageCss: false
 pageScript: false

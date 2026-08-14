@@ -57,6 +57,10 @@ related:
     ed: "ED. 59"
     title: "What India's DPDPA actually changes for healthcare"
 needsChart: true
+excerpt: "The Swasth Bharat Portal puts multiple national health programmes behind one login, and it is the right thing to build. But India never had a digitisation problem; it had an org-chart problem. Each integrated programme keeps its own budget, targets and reporting line. Convergence is real at the interface and absent underneath, and the number that would prove otherwise is not being published."
+displayCategory: "Governance"
+tags: ["Digital Health"]
+postDate: "2026-08-14"
 legacyBody: true
 pageCss: true
 pageScript: true

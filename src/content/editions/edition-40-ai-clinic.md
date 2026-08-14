@@ -56,6 +56,10 @@ related:
     ed: "ED. 3"
     title: "Harness IoT to revolutionize autism care"
 needsChart: false
+excerpt: "GIMS Greater Noida launched India's first government hospital-based AI clinic in Jan 2026, moving AI from pilots to frontline public healthcare across imaging, pathology, cancer detection and genomics."
+displayCategory: "Digital Health"
+tags: ["Policy"]
+postDate: "2026-01-09"
 legacyBody: true
 pageCss: false
 pageScript: false

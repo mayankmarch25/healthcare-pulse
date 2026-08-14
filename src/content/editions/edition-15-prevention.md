@@ -100,6 +100,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "Returns in healthcare come from social determinants, not reorganizing boards. Sri Lanka, Brazil, Costa Rica and Cuba show upstream investment in education, incentives, infrastructure and primary care wins."
+displayCategory: "Policy"
+tags: ["Strategy"]
+postDate: "2025-07-11"
 legacyBody: true
 pageCss: false
 pageScript: false

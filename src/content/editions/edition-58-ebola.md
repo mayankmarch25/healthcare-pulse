@@ -164,6 +164,10 @@ related:
     ed: "ED. 8"
     title: "Four is Greater Than Three: Why Health Equity Completes the Puzzle"
 needsChart: false
+excerpt: "A 2026 Bundibugyo Ebola outbreak is unfolding. India has zero cases and low direct risk. But the real story is diagnostics, preparedness, and vaccine-manufacturing positioning."
+displayCategory: "Biotech"
+tags: ["Policy"]
+postDate: "2026-05-22"
 legacyBody: true
 pageCss: true
 pageScript: false
